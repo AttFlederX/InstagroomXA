@@ -18,12 +18,72 @@ namespace InstagroomXA.Core.ViewModels
         private IUserDataService _userDataService;
         private IDialogService _dialogService;
 
+        private string _username;
+        private string _password;
+        private bool _isLoading;
+
+        #region Bindable properties
+        public string Username
+        {
+            get => _username;
+            set
+            {
+                _username = value;
+                RaisePropertyChanged(() => Username);
+            }
+        }
+
+        public string Password
+        {
+            get => _password;
+            set
+            {
+                _password = value;
+                RaisePropertyChanged(() => Password);
+            }
+        }
+
+        public bool IsLoading
+        {
+            get => _isLoading;
+            set
+            {
+                _isLoading = value;
+                RaisePropertyChanged(() => IsLoading);
+            }
+        }
+        #endregion
+
         #region Commands 
         public IMvxCommand LoginCommand
         {
-            get => new MvxCommand(() => 
+            get => new MvxCommand(async () =>  
             {
+                if (string.IsNullOrWhiteSpace(Username))
+                {
+                    await _dialogService.ShowAlertAsync("Please enter your username", "Error", "OK");
+                    return;
+                }
 
+                var user = await _userDataService.GetUserByUsernameAsync(Username);
+                if (user != null)
+                {
+                    if (user.Password == Password)
+                    {
+                        // transfer to the master tabbed page
+                    }
+                    else
+                    {
+                        await _dialogService.ShowAlertAsync("Incorrect password. Try re-entering your credentials", "Error", "OK");
+                        Password = string.Empty;
+                    }
+                }
+                else
+                {
+                    await _dialogService.ShowAlertAsync($"User \"{Username}\" does not exist. Try re-entering your credentials", "Error",
+                        "OK");
+                    Password = string.Empty;
+                }
             });
         }
 
@@ -31,7 +91,7 @@ namespace InstagroomXA.Core.ViewModels
         {
             get => new MvxCommand(() =>
             {
-
+                // fetch the data from Facebook API
             });
         }
 
@@ -39,7 +99,7 @@ namespace InstagroomXA.Core.ViewModels
         {
             get => new MvxCommand(() =>
             {
-
+                ShowViewModel<RegistationViewModel>();
             });
         }
         #endregion
