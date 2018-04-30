@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace InstagroomXA.Core.Model
 {
     /// <summary>
-    /// User data class
+    /// User profile data class
     /// </summary>
     public class User
     {

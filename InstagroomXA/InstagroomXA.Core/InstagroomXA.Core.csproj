@@ -40,9 +40,15 @@
     <Compile Include="Contracts\IValidationService.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\Fragments\FeedViewModel.cs" />
     <Compile Include="ViewModels\FirstViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\MasterTabControlViewModel.cs" />
+    <Compile Include="ViewModels\Fragments\NewPostViewModel.cs" />
+    <Compile Include="ViewModels\Fragments\NotificationsViewModel.cs" />
+    <Compile Include="ViewModels\Fragments\ProfileViewModel.cs" />
     <Compile Include="ViewModels\RegistationViewModel.cs" />
+    <Compile Include="ViewModels\Fragments\SearchViewModel.cs" />
     <Compile Include="ViewModels\WelcomeViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

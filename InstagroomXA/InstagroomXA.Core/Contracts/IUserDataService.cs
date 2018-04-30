@@ -13,6 +13,8 @@ namespace InstagroomXA.Core.Contracts
     /// </summary>
     public interface IUserDataService
     {
+        User CurrentUser { get; set; }
+
         Task<User> GetUserByIDAsync(int userId);
         Task<User> GetUserByUsernameAsync(string username);
 

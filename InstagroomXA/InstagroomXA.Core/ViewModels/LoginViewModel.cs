@@ -70,6 +70,7 @@ namespace InstagroomXA.Core.ViewModels
                 {
                     if (user.Password == Password)
                     {
+                        _userDataService.CurrentUser = user;
                         // transfer to the master tabbed page
                     }
                     else
