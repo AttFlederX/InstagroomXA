@@ -4455,6 +4455,9 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f04003e
 			public const int toolbar = 2130968638;
 			
+			// aapt resource value: 0x7f04003f
+			public const int WelcomeView = 2130968639;
+			
 			static Layout()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();

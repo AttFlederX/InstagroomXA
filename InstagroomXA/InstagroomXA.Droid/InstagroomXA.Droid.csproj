@@ -181,6 +181,9 @@
     <None Include="packages.config" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Resources\AboutResources.txt" />
+    <AndroidResource Include="Resources\layout\WelcomeView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DebugTrace.cs" />
@@ -193,6 +196,7 @@
     <Compile Include="Views\FirstView.cs" />
     <Compile Include="Views\BaseView.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Views\WelcomeView.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\AboutAssets.txt" />
