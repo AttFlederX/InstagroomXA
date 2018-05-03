@@ -1,7 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-</LinearLayout>
+    android:layout_height="match_parent"
+    android:background="#333333">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        local:layout_marginTopPercent="20%">
+        <TextView
+            android:text="Welcome to"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:textColor="#AAAAAA" />
+        <TextView
+            android:text="Instagroom"
+            android:textAlignment="center"
+            android:textSize="48dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:textColor="#EEEEEE" />
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Log in"
+            android:layout_marginTop="65dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            local:MvxBind="Click LoginCommand" />
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            local:MvxBind="Click RegisterCommand" />
+    </LinearLayout>
+</android.support.percent.PercentRelativeLayout>

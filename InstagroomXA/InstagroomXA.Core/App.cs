@@ -11,7 +11,7 @@ namespace InstagroomXA.Core
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-            RegisterAppStart<ViewModels.FirstViewModel>();
+            RegisterAppStart(new AppStart());
         }
     }
 }
