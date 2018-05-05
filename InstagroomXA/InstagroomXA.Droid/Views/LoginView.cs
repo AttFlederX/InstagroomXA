@@ -21,22 +21,7 @@ namespace InstagroomXA.Droid.Views
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            try
-            {
-                base.OnCreate(savedInstanceState);
-            }
-            catch (Exception ex)
-            {
-                try
-                {
-                    throw ex.InnerException;
-                }
-                catch (Exception iex)
-                {
-                    throw iex.InnerException;
-                }
-            }
-
+            base.OnCreate(savedInstanceState);
 
             // Create your application here
             SetContentView(Resource.Layout.LoginView);

@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="ApplicationName">InstagroomXA</string>
+
+  <!--Welcome view strings-->
+  <string name="welcomeString">Welcome to</string>
+  <string name="loginButtonText">Log in</string>
+  <string name="registerButtonText">Sign up</string>
 </resources>
