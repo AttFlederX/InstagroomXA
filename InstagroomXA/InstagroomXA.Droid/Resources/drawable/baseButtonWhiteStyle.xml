@@ -6,6 +6,6 @@
   <corners android:radius="10dp" />
   <solid android:color="#ffffff"/>
   <stroke
-      android:width="0.5dip"
+      android:width="1.0dip"
       android:color="@color/buttonBlue" />
 </shape>

@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Android.Graphics;
 
 using MvvmCross.Droid.Views;
 
@@ -25,6 +26,19 @@ namespace InstagroomXA.Droid.Views
 
             // Create your application here
             SetContentView(Resource.Layout.LoginView);
+
+            SetViewFonts();
+        }
+
+        /// <summary>
+        /// Sets the fonts for text views
+        /// To be later moved into AXML code
+        /// </summary>
+        private void SetViewFonts()
+        {
+            var logoView = FindViewById<TextView>(Resource.Id.logoTextView);
+
+            logoView.SetTypeface(Typeface.CreateFromAsset(Assets, "font/Logo.ttf"), TypefaceStyle.Normal);
         }
     }
 }

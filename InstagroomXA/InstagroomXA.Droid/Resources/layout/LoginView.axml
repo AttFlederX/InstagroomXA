@@ -1,7 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-</LinearLayout>
+    android:layout_height="match_parent"
+    style="@style/View.AuthPageStyle">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        local:layout_marginTopPercent="5%">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_alignParentTop="true">
+            <TextView
+                android:id="@+id/logoTextView"
+                android:text="Instagroom"
+                android:textAlignment="center"
+                android:textSize="64dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:textColor="#EEEEEE" />
+            <EditText
+                android:id="@+id/usernameEditText"
+                style="@style/EditText.BaseStyle"
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:hint="@string/usernameString"
+                local:MvxBind="Text Username, Mode=TwoWay" />
+            <EditText
+                android:id="@+id/passwordEditText"
+                style="@style/EditText.BaseStyle"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:hint="@string/passwordString"
+                local:MvxBind="Text Password, Mode=TwoWay"
+                android:typeface="normal" />
+            <Button
+                android:id="@+id/loginButton"
+                style="@style/Button.BaseStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/loginButtonText"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                local:MvxBind="Click LoginCommand" />
+            <TextView
+                android:text="OR"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:textSize="16dp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:textColor="#EEEEEE" />
+            <Button
+                android:id="@+id/loginButton"
+                style="@style/Button.FacebookStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/loginViaFacebookButtonText"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                local:MvxBind="Click LoginViaFacebookCommand" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true">
+            <TextView
+                android:text="@string/registrationText"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:layout_marginLeft="20dp" />
+            <Button
+                android:id="@+id/registerButton"
+                style="@style/Button.BaseWhiteStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/registerButtonText"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:textStyle="bold"
+                local:MvxBind="Click RegisterCommand" />
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.percent.PercentRelativeLayout>

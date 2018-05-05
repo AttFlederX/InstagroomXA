@@ -55,54 +55,54 @@ namespace InstagroomXA.Core.ViewModels
         #endregion
 
         #region Commands 
-        //public IMvxCommand LoginCommand
-        //{
-        //    get => new MvxCommand(async () =>  
-        //    {
-        //        if (string.IsNullOrWhiteSpace(Username))
-        //        {
-        //            await _dialogService.ShowAlertAsync("Please enter your username", "Error", "OK");
-        //            return;
-        //        }
+        public IMvxCommand LoginCommand
+        {
+            get => new MvxCommand(async () =>
+            {
+                if (string.IsNullOrWhiteSpace(Username))
+                {
+                    await _dialogService.ShowAlertAsync("Please enter your username", "Error", "OK");
+                    return;
+                }
 
-        //        var user = await _userDataService.GetUserByUsernameAsync(Username);
-        //        if (user != null)
-        //        {
-        //            if (user.Password == Password)
-        //            {
-        //                _userDataService.CurrentUser = user;
-        //                // transfer to the master tabbed page
-        //            }
-        //            else
-        //            {
-        //                await _dialogService.ShowAlertAsync("Incorrect password. Try re-entering your credentials", "Error", "OK");
-        //                Password = string.Empty;
-        //            }
-        //        }
-        //        else
-        //        {
-        //            await _dialogService.ShowAlertAsync($"User \"{Username}\" does not exist. Try re-entering your credentials", "Error",
-        //                "OK");
-        //            Password = string.Empty;
-        //        }
-        //    });
-        //}
+                var user = await _userDataService.GetUserByUsernameAsync(Username);
+                if (user != null)
+                {
+                    if (user.Password == Password)
+                    {
+                        _userDataService.CurrentUser = user;
+                        // transfer to the master tabbed page
+                    }
+                    else
+                    {
+                        await _dialogService.ShowAlertAsync("Incorrect password. Try re-entering your credentials", "Error", "OK");
+                        Password = string.Empty;
+                    }
+                }
+                else
+                {
+                    await _dialogService.ShowAlertAsync($"User \"{Username}\" does not exist. Try re-entering your credentials", "Error",
+                        "OK");
+                    Password = string.Empty;
+                }
+            });
+        }
 
-        //public IMvxCommand LoginViaFacebookCommand
-        //{
-        //    get => new MvxCommand(() =>
-        //    {
-        //        // fetch the data from Facebook API
-        //    });
-        //}
+        public IMvxCommand LoginViaFacebookCommand
+        {
+            get => new MvxCommand(() =>
+            {
+                // fetch the data from Facebook API
+            });
+        }
 
-        //public IMvxCommand RegisterCommand
-        //{
-        //    get => new MvxCommand(() =>
-        //    {
-        //        ShowViewModel<RegistationViewModel>();
-        //    });
-        //}
+        public IMvxCommand RegisterCommand
+        {
+            get => new MvxCommand(() =>
+            {
+                ShowViewModel<RegistationViewModel>();
+            });
+        }
         #endregion
 
         public LoginViewModel(IUserDataService userDataService, IDialogService dialogService)

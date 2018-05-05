@@ -6,4 +6,10 @@
   <string name="welcomeString">Welcome to</string>
   <string name="loginButtonText">Log in</string>
   <string name="registerButtonText">Sign up</string>
+
+  <!--Login view strings-->
+  <string name="usernameString">Username</string>
+  <string name="passwordString">Password</string>
+  <string name="loginViaFacebookButtonText">Log in via Facebook</string>
+  <string name="registrationText">Don\'t have an account?</string>
 </resources>
