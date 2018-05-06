@@ -155,6 +155,14 @@ namespace InstagroomXA.Core.ViewModels
                 }
             });
         }
+
+        public IMvxCommand LoginCommand
+        {
+            get => new MvxCommand(() =>
+            {
+                ShowViewModel<LoginViewModel>();
+            });
+        }
         #endregion
 
         public RegistationViewModel(IUserDataService userDataService, IDialogService dialogService, IValidationService validationService)

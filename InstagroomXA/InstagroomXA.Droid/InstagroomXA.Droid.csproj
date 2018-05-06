@@ -209,6 +209,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\font\Logo.ttf" />
+    <AndroidResource Include="Resources\layout\MasterTabControlView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DebugTrace.cs" />
@@ -221,6 +224,7 @@
     <Compile Include="Views\BaseView.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Views\LoginView.cs" />
+    <Compile Include="Views\MasterTabControlView.cs" />
     <Compile Include="Views\RegistrationView.cs" />
     <Compile Include="Views\WelcomeView.cs" />
   </ItemGroup>

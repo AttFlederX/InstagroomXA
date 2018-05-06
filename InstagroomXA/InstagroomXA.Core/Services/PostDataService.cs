@@ -36,6 +36,18 @@ namespace InstagroomXA.Core.Services
         }
 
         /// <summary>
+        /// Return all (or first n) posts by the specified user
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
+        public async Task<IEnumerable<Post>> GetUserPosts(int userId, int n = 0)
+        {
+            var query = _masterConnection.Table<Post>().Where(p => (p.UserID == userId));
+            if (n != 0) { query = query.Take(n); }
+            return await query.ToListAsync();
+        }
+
+        /// <summary>
         /// Adds a new post profile to the SQLite database
         /// </summary>
         /// <param name="newUser"></param>

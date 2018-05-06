@@ -26,10 +26,10 @@ namespace InstagroomXA.Droid.Services
         protected Activity CurrentActivity =>
             Mvx.Resolve<IMvxAndroidCurrentTopActivity>().Activity;
 
-        public Task ShowAlertAsync(string message,
+        public async Task ShowAlertAsync(string message,
             string title, string buttonText)
         {
-            return Task.Run(() =>
+            await Task.Run(() =>
             {
                 Alert(message, title, buttonText);
             });

@@ -72,6 +72,7 @@ namespace InstagroomXA.Core.ViewModels
                     {
                         _userDataService.CurrentUser = user;
                         // transfer to the master tabbed page
+                        ShowViewModel<MasterTabControlViewModel>();
                     }
                     else
                     {
