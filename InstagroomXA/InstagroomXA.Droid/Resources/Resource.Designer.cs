@@ -4304,6 +4304,9 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0a008d
 			public const int edit_query = 2131361933;
 			
+			// aapt resource value: 0x7f0a00c2
+			public const int emailEditText = 2131361986;
+			
 			// aapt resource value: 0x7f0a0032
 			public const int end = 2131361842;
 			
@@ -4333,6 +4336,9 @@ namespace InstagroomXA.Droid
 			
 			// aapt resource value: 0x7f0a004a
 			public const int fill_vertical = 2131361866;
+			
+			// aapt resource value: 0x7f0a00c0
+			public const int firstNameEditText = 2131361984;
 			
 			// aapt resource value: 0x7f0a0056
 			public const int @fixed = 2131361878;
@@ -4379,6 +4385,9 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0a009b
 			public const int largeLabel = 2131361947;
 			
+			// aapt resource value: 0x7f0a00c1
+			public const int lastNameEditText = 2131361985;
+			
 			// aapt resource value: 0x7f0a004b
 			public const int left = 2131361867;
 			
@@ -4400,14 +4409,14 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0a00a8
 			public const int logoTextView = 2131361960;
 			
-			// aapt resource value: 0x7f0a00c3
-			public const int masked = 2131361987;
+			// aapt resource value: 0x7f0a00c7
+			public const int masked = 2131361991;
 			
 			// aapt resource value: 0x7f0a00b3
 			public const int media_actions = 2131361971;
 			
-			// aapt resource value: 0x7f0a00c1
-			public const int message = 2131361985;
+			// aapt resource value: 0x7f0a00c5
+			public const int message = 2131361989;
 			
 			// aapt resource value: 0x7f0a0033
 			public const int middle = 2131361843;
@@ -4474,6 +4483,9 @@ namespace InstagroomXA.Droid
 			
 			// aapt resource value: 0x7f0a00ac
 			public const int registerButton = 2131361964;
+			
+			// aapt resource value: 0x7f0a00c3
+			public const int repeatPasswordEditText = 2131361987;
 			
 			// aapt resource value: 0x7f0a004c
 			public const int right = 2131361868;
@@ -4643,8 +4655,8 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0a007e
 			public const int title_template = 2131361918;
 			
-			// aapt resource value: 0x7f0a00c0
-			public const int toolbar = 2131361984;
+			// aapt resource value: 0x7f0a00c4
+			public const int toolbar = 2131361988;
 			
 			// aapt resource value: 0x7f0a0040
 			public const int top = 2131361856;
@@ -4685,8 +4697,8 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0a0016
 			public const int view_offset_helper = 2131361814;
 			
-			// aapt resource value: 0x7f0a00c2
-			public const int visible = 2131361986;
+			// aapt resource value: 0x7f0a00c6
+			public const int visible = 2131361990;
 			
 			// aapt resource value: 0x7f0a003e
 			public const int withText = 2131361854;
@@ -5079,8 +5091,23 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0b0020
 			public const int character_counter_pattern = 2131427360;
 			
+			// aapt resource value: 0x7f0b0033
+			public const int createAccountButtonText = 2131427379;
+			
+			// aapt resource value: 0x7f0b0031
+			public const int emailString = 2131427377;
+			
+			// aapt resource value: 0x7f0b002f
+			public const int firstNameString = 2131427375;
+			
+			// aapt resource value: 0x7f0b0030
+			public const int lastNameString = 2131427376;
+			
 			// aapt resource value: 0x7f0b0029
 			public const int loginButtonText = 2131427369;
+			
+			// aapt resource value: 0x7f0b0034
+			public const int loginText = 2131427380;
 			
 			// aapt resource value: 0x7f0b002d
 			public const int loginViaFacebookButtonText = 2131427373;
@@ -5108,6 +5135,9 @@ namespace InstagroomXA.Droid
 			
 			// aapt resource value: 0x7f0b002e
 			public const int registrationText = 2131427374;
+			
+			// aapt resource value: 0x7f0b0032
+			public const int repeatPasswordString = 2131427378;
 			
 			// aapt resource value: 0x7f0b0011
 			public const int search_menu_title = 2131427345;

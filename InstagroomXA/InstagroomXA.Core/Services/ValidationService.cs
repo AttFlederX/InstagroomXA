@@ -16,7 +16,7 @@ namespace InstagroomXA.Core.Services
     {
         private Regex emailValidator = new Regex(@"^[0-9a-z\.]+@\w+.\w+$");
 
-        public string PasswordCriteria => throw new NotImplementedException();
+        public string PasswordCriteria { get => "at least 8 characters long"; }
 
 
         public bool IsEmailValid(string email)

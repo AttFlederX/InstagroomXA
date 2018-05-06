@@ -12,4 +12,12 @@
   <string name="passwordString">Password</string>
   <string name="loginViaFacebookButtonText">Log in via Facebook</string>
   <string name="registrationText">Don\'t have an account?</string>
+
+  <!--Registration view strings-->
+  <string name="firstNameString">First name</string>
+  <string name="lastNameString">Last name</string>
+  <string name="emailString">Email</string>
+  <string name="repeatPasswordString">Repeat password</string>
+  <string name="createAccountButtonText">Create New Account</string>
+  <string name="loginText">Have an account?</string>
 </resources>
