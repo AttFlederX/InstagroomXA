@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/View.AuthPageStyle">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="35dp"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/usernameEditText"
+            style="@style/EditText.BaseStyle"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="@string/usernameString"
+            local:MvxBind="Text Username, Mode=TwoWay" />
+        <EditText
+            android:id="@+id/firstNameEditText"
+            style="@style/EditText.BaseStyle"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="@string/firstNameString"
+            local:MvxBind="Text FirstName, Mode=TwoWay" />
+        <EditText
+            android:id="@+id/lastNameEditText"
+            style="@style/EditText.BaseStyle"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="@string/lastNameString"
+            local:MvxBind="Text LastName, Mode=TwoWay" />
+        <EditText
+            android:id="@+id/emailEditText"
+            style="@style/EditText.BaseStyle"
+            android:inputType="textEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="@string/emailString"
+            local:MvxBind="Text Email, Mode=TwoWay" />
+        <EditText
+            android:id="@+id/passwordEditText"
+            style="@style/EditText.BaseStyle"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="@string/passwordString"
+            local:MvxBind="Text Password, Mode=TwoWay"
+            android:typeface="normal" />
+        <EditText
+            android:id="@+id/repeatPasswordEditText"
+            style="@style/EditText.BaseStyle"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="@string/repeatPasswordString"
+            local:MvxBind="Text RepeatPassword, Mode=TwoWay"
+            android:typeface="normal" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/registerButton"
+            style="@style/Button.BaseWhiteStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/registerButtonText"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="15dp"
+            android:textStyle="bold"
+            local:MvxBind="Click SignUpCommand" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true">
+            <TextView
+                android:text="@string/loginText"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:layout_marginLeft="20dp" />
+            <Button
+                android:id="@+id/loginButton"
+                style="@style/Button.BaseStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/loginButtonText"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:textStyle="bold"
+                local:MvxBind="Click LoginCommand" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.percent.PercentRelativeLayout>

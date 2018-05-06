@@ -12,21 +12,20 @@ using Android.Widget;
 using Android.Graphics;
 
 using MvvmCross.Droid.Views;
-using MvvmCross.Droid.Support.V7.AppCompat;
 
 using InstagroomXA.Core.ViewModels;
 
 namespace InstagroomXA.Droid.Views
 {
-    [Activity(Label = "Instagroom")]
-    public class WelcomeView : MvxActivity<WelcomeViewModel>
+    [Activity(Label = "Log in")]
+    public class LoginView : MvxActivity<LoginViewModel>
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             // Create your application here
-            SetContentView(Resource.Layout.WelcomeView);
+            SetContentView(Resource.Layout.LoginView);
 
             SetViewFonts();
         }
