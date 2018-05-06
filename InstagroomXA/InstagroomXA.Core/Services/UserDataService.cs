@@ -67,6 +67,19 @@ namespace InstagroomXA.Core.Services
         }
 
         /// <summary>
+        /// Returns the list of users whose name matches the query
+        /// </summary>
+        /// <param name="query"></param>
+        /// <returns></returns>
+        public async Task<IEnumerable<User>> GetUserByQueryAsync(string queryString)
+        {
+            var query = _masterConnection.Table<User>().Where(u => (u.Username.Contains(queryString) || u.FirstName.Contains(queryString) ||
+                                                                    u.LastName.Contains(queryString)));
+
+            return await query.ToListAsync();
+        }
+
+        /// <summary>
         /// Updates the user profile in the database
         /// </summary>
         /// <param name="updUser"></param>
