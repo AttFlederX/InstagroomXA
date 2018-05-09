@@ -219,6 +219,21 @@
     <AndroidResource Include="Resources\layout\MasterTabControlView.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\FeedView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\NewPostView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\NotificationsView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ProfileView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\SearchView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bootstrap\MessengerPluginBootstrap.cs" />
@@ -231,9 +246,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\BaseView.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Views\Fragments\FeedView.cs" />
     <Compile Include="Views\LoginView.cs" />
     <Compile Include="Views\MasterTabControlView.cs" />
+    <Compile Include="Views\Fragments\NewPostView.cs" />
+    <Compile Include="Views\Fragments\NotificationsView.cs" />
+    <Compile Include="Views\Fragments\ProfileView.cs" />
     <Compile Include="Views\RegistrationView.cs" />
+    <Compile Include="Views\Fragments\SearchView.cs" />
     <Compile Include="Views\WelcomeView.cs" />
   </ItemGroup>
   <ItemGroup>

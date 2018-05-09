@@ -4151,8 +4151,8 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0a0039
 			public const int SYM = 2131361849;
 			
-			// aapt resource value: 0x7f0a00b3
-			public const int action0 = 2131361971;
+			// aapt resource value: 0x7f0a00b4
+			public const int action0 = 2131361972;
 			
 			// aapt resource value: 0x7f0a008b
 			public const int action_bar = 2131361931;
@@ -4175,17 +4175,17 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0a0069
 			public const int action_bar_title = 2131361897;
 			
-			// aapt resource value: 0x7f0a00b0
-			public const int action_container = 2131361968;
+			// aapt resource value: 0x7f0a00b1
+			public const int action_container = 2131361969;
 			
 			// aapt resource value: 0x7f0a008c
 			public const int action_context_bar = 2131361932;
 			
-			// aapt resource value: 0x7f0a00b7
-			public const int action_divider = 2131361975;
+			// aapt resource value: 0x7f0a00b8
+			public const int action_divider = 2131361976;
 			
-			// aapt resource value: 0x7f0a00b1
-			public const int action_image = 2131361969;
+			// aapt resource value: 0x7f0a00b2
+			public const int action_image = 2131361970;
 			
 			// aapt resource value: 0x7f0a0003
 			public const int action_menu_divider = 2131361795;
@@ -4202,17 +4202,17 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0a006b
 			public const int action_mode_close_button = 2131361899;
 			
-			// aapt resource value: 0x7f0a00b2
-			public const int action_text = 2131361970;
+			// aapt resource value: 0x7f0a00b3
+			public const int action_text = 2131361971;
 			
-			// aapt resource value: 0x7f0a00c0
-			public const int actions = 2131361984;
+			// aapt resource value: 0x7f0a00c1
+			public const int actions = 2131361985;
 			
 			// aapt resource value: 0x7f0a006c
 			public const int activity_chooser_view_content = 2131361900;
 			
-			// aapt resource value: 0x7f0a00ad
-			public const int activity_main = 2131361965;
+			// aapt resource value: 0x7f0a00ae
+			public const int activity_main = 2131361966;
 			
 			// aapt resource value: 0x7f0a0029
 			public const int add = 2131361833;
@@ -4247,8 +4247,8 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0a0072
 			public const int buttonPanel = 2131361906;
 			
-			// aapt resource value: 0x7f0a00b4
-			public const int cancel_action = 2131361972;
+			// aapt resource value: 0x7f0a00b5
+			public const int cancel_action = 2131361973;
 			
 			// aapt resource value: 0x7f0a0047
 			public const int center = 2131361863;
@@ -4265,8 +4265,8 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0a0082
 			public const int checkbox = 2131361922;
 			
-			// aapt resource value: 0x7f0a00bc
-			public const int chronometer = 2131361980;
+			// aapt resource value: 0x7f0a00bd
+			public const int chronometer = 2131361981;
 			
 			// aapt resource value: 0x7f0a0050
 			public const int clip_horizontal = 2131361872;
@@ -4283,8 +4283,8 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0a0075
 			public const int contentPanel = 2131361909;
 			
-			// aapt resource value: 0x7f0a00ae
-			public const int content_frame = 2131361966;
+			// aapt resource value: 0x7f0a00af
+			public const int content_frame = 2131361967;
 			
 			// aapt resource value: 0x7f0a009d
 			public const int coordinator = 2131361949;
@@ -4328,14 +4328,14 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0a008d
 			public const int edit_query = 2131361933;
 			
-			// aapt resource value: 0x7f0a00c5
-			public const int emailEditText = 2131361989;
+			// aapt resource value: 0x7f0a00c6
+			public const int emailEditText = 2131361990;
 			
 			// aapt resource value: 0x7f0a0032
 			public const int end = 2131361842;
 			
-			// aapt resource value: 0x7f0a00c2
-			public const int end_padder = 2131361986;
+			// aapt resource value: 0x7f0a00c3
+			public const int end_padder = 2131361987;
 			
 			// aapt resource value: 0x7f0a0041
 			public const int enterAlways = 2131361857;
@@ -4361,8 +4361,8 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0a004a
 			public const int fill_vertical = 2131361866;
 			
-			// aapt resource value: 0x7f0a00c3
-			public const int firstNameEditText = 2131361987;
+			// aapt resource value: 0x7f0a00c4
+			public const int firstNameEditText = 2131361988;
 			
 			// aapt resource value: 0x7f0a0056
 			public const int @fixed = 2131361878;
@@ -4385,8 +4385,8 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0a0071
 			public const int icon = 2131361905;
 			
-			// aapt resource value: 0x7f0a00c1
-			public const int icon_group = 2131361985;
+			// aapt resource value: 0x7f0a00c2
+			public const int icon_group = 2131361986;
 			
 			// aapt resource value: 0x7f0a003c
 			public const int ifRoom = 2131361852;
@@ -4394,8 +4394,8 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0a006e
 			public const int image = 2131361902;
 			
-			// aapt resource value: 0x7f0a00bd
-			public const int info = 2131361981;
+			// aapt resource value: 0x7f0a00be
+			public const int info = 2131361982;
 			
 			// aapt resource value: 0x7f0a0059
 			public const int invisible = 2131361881;
@@ -4409,8 +4409,8 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0a009b
 			public const int largeLabel = 2131361947;
 			
-			// aapt resource value: 0x7f0a00c4
-			public const int lastNameEditText = 2131361988;
+			// aapt resource value: 0x7f0a00c5
+			public const int lastNameEditText = 2131361989;
 			
 			// aapt resource value: 0x7f0a004b
 			public const int left = 2131361867;
@@ -4427,38 +4427,38 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0a0070
 			public const int list_item = 2131361904;
 			
-			// aapt resource value: 0x7f0a00ab
-			public const int loginButton = 2131361963;
+			// aapt resource value: 0x7f0a00ac
+			public const int loginButton = 2131361964;
 			
-			// aapt resource value: 0x7f0a00a8
-			public const int logoTextView = 2131361960;
-			
-			// aapt resource value: 0x7f0a00ca
-			public const int masked = 2131361994;
-			
-			// aapt resource value: 0x7f0a00af
-			public const int masterBottomNavigationView = 2131361967;
-			
-			// aapt resource value: 0x7f0a00b6
-			public const int media_actions = 2131361974;
+			// aapt resource value: 0x7f0a00a9
+			public const int logoTextView = 2131361961;
 			
 			// aapt resource value: 0x7f0a00cb
-			public const int menu_feed = 2131361995;
+			public const int masked = 2131361995;
 			
-			// aapt resource value: 0x7f0a00cd
-			public const int menu_newPost = 2131361997;
+			// aapt resource value: 0x7f0a00b0
+			public const int masterBottomNavigationView = 2131361968;
 			
-			// aapt resource value: 0x7f0a00ce
-			public const int menu_notifs = 2131361998;
-			
-			// aapt resource value: 0x7f0a00cf
-			public const int menu_profile = 2131361999;
+			// aapt resource value: 0x7f0a00b7
+			public const int media_actions = 2131361975;
 			
 			// aapt resource value: 0x7f0a00cc
-			public const int menu_search = 2131361996;
+			public const int menu_feed = 2131361996;
 			
-			// aapt resource value: 0x7f0a00c8
-			public const int message = 2131361992;
+			// aapt resource value: 0x7f0a00ce
+			public const int menu_newPost = 2131361998;
+			
+			// aapt resource value: 0x7f0a00cf
+			public const int menu_notifs = 2131361999;
+			
+			// aapt resource value: 0x7f0a00d0
+			public const int menu_profile = 2131362000;
+			
+			// aapt resource value: 0x7f0a00cd
+			public const int menu_search = 2131361997;
+			
+			// aapt resource value: 0x7f0a00c9
+			public const int message = 2131361993;
 			
 			// aapt resource value: 0x7f0a0033
 			public const int middle = 2131361843;
@@ -4481,14 +4481,14 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0a0020
 			public const int normal = 2131361824;
 			
-			// aapt resource value: 0x7f0a00bf
-			public const int notification_background = 2131361983;
+			// aapt resource value: 0x7f0a00c0
+			public const int notification_background = 2131361984;
+			
+			// aapt resource value: 0x7f0a00ba
+			public const int notification_main_column = 2131361978;
 			
 			// aapt resource value: 0x7f0a00b9
-			public const int notification_main_column = 2131361977;
-			
-			// aapt resource value: 0x7f0a00b8
-			public const int notification_main_column_container = 2131361976;
+			public const int notification_main_column_container = 2131361977;
 			
 			// aapt resource value: 0x7f0a005e
 			public const int packed = 2131361886;
@@ -4505,8 +4505,8 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0a000b
 			public const int parent_matrix = 2131361803;
 			
-			// aapt resource value: 0x7f0a00aa
-			public const int passwordEditText = 2131361962;
+			// aapt resource value: 0x7f0a00ab
+			public const int passwordEditText = 2131361963;
 			
 			// aapt resource value: 0x7f0a005b
 			public const int percent = 2131361883;
@@ -4523,20 +4523,20 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0a0084
 			public const int radio = 2131361924;
 			
-			// aapt resource value: 0x7f0a00ac
-			public const int registerButton = 2131361964;
+			// aapt resource value: 0x7f0a00ad
+			public const int registerButton = 2131361965;
 			
-			// aapt resource value: 0x7f0a00c6
-			public const int repeatPasswordEditText = 2131361990;
+			// aapt resource value: 0x7f0a00c7
+			public const int repeatPasswordEditText = 2131361991;
 			
 			// aapt resource value: 0x7f0a004c
 			public const int right = 2131361868;
 			
-			// aapt resource value: 0x7f0a00be
-			public const int right_icon = 2131361982;
+			// aapt resource value: 0x7f0a00bf
+			public const int right_icon = 2131361983;
 			
-			// aapt resource value: 0x7f0a00ba
-			public const int right_side = 2131361978;
+			// aapt resource value: 0x7f0a00bb
+			public const int right_side = 2131361979;
 			
 			// aapt resource value: 0x7f0a000c
 			public const int save_image_matrix = 2131361804;
@@ -4649,8 +4649,8 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0a004d
 			public const int start = 2131361869;
 			
-			// aapt resource value: 0x7f0a00b5
-			public const int status_bar_latest_event_content = 2131361973;
+			// aapt resource value: 0x7f0a00b6
+			public const int status_bar_latest_event_content = 2131361974;
 			
 			// aapt resource value: 0x7f0a0085
 			public const int submenuarrow = 2131361925;
@@ -4676,6 +4676,9 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0a0078
 			public const int textSpacerNoTitle = 2131361912;
 			
+			// aapt resource value: 0x7f0a00a8
+			public const int textView1 = 2131361960;
+			
 			// aapt resource value: 0x7f0a00a7
 			public const int text_input_password_toggle = 2131361959;
 			
@@ -4685,8 +4688,8 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0a0015
 			public const int textinput_error = 2131361813;
 			
-			// aapt resource value: 0x7f0a00bb
-			public const int time = 2131361979;
+			// aapt resource value: 0x7f0a00bc
+			public const int time = 2131361980;
 			
 			// aapt resource value: 0x7f0a001c
 			public const int title = 2131361820;
@@ -4697,8 +4700,8 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0a007e
 			public const int title_template = 2131361918;
 			
-			// aapt resource value: 0x7f0a00c7
-			public const int toolbar = 2131361991;
+			// aapt resource value: 0x7f0a00c8
+			public const int toolbar = 2131361992;
 			
 			// aapt resource value: 0x7f0a0040
 			public const int top = 2131361856;
@@ -4733,14 +4736,14 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0a0028
 			public const int useLogo = 2131361832;
 			
-			// aapt resource value: 0x7f0a00a9
-			public const int usernameEditText = 2131361961;
+			// aapt resource value: 0x7f0a00aa
+			public const int usernameEditText = 2131361962;
 			
 			// aapt resource value: 0x7f0a0016
 			public const int view_offset_helper = 2131361814;
 			
-			// aapt resource value: 0x7f0a00c9
-			public const int visible = 2131361993;
+			// aapt resource value: 0x7f0a00ca
+			public const int visible = 2131361994;
 			
 			// aapt resource value: 0x7f0a003e
 			public const int withText = 2131361854;
@@ -4931,82 +4934,97 @@ namespace InstagroomXA.Droid
 			public const int design_text_input_password_icon = 2131034151;
 			
 			// aapt resource value: 0x7f050028
-			public const int LoginView = 2131034152;
+			public const int FeedView = 2131034152;
 			
 			// aapt resource value: 0x7f050029
-			public const int MasterTabControlView = 2131034153;
+			public const int LoginView = 2131034153;
 			
 			// aapt resource value: 0x7f05002a
-			public const int notification_action = 2131034154;
+			public const int MasterTabControlView = 2131034154;
 			
 			// aapt resource value: 0x7f05002b
-			public const int notification_action_tombstone = 2131034155;
+			public const int NewPostView = 2131034155;
 			
 			// aapt resource value: 0x7f05002c
-			public const int notification_media_action = 2131034156;
+			public const int notification_action = 2131034156;
 			
 			// aapt resource value: 0x7f05002d
-			public const int notification_media_cancel_action = 2131034157;
+			public const int notification_action_tombstone = 2131034157;
 			
 			// aapt resource value: 0x7f05002e
-			public const int notification_template_big_media = 2131034158;
+			public const int notification_media_action = 2131034158;
 			
 			// aapt resource value: 0x7f05002f
-			public const int notification_template_big_media_custom = 2131034159;
+			public const int notification_media_cancel_action = 2131034159;
 			
 			// aapt resource value: 0x7f050030
-			public const int notification_template_big_media_narrow = 2131034160;
+			public const int notification_template_big_media = 2131034160;
 			
 			// aapt resource value: 0x7f050031
-			public const int notification_template_big_media_narrow_custom = 2131034161;
+			public const int notification_template_big_media_custom = 2131034161;
 			
 			// aapt resource value: 0x7f050032
-			public const int notification_template_custom_big = 2131034162;
+			public const int notification_template_big_media_narrow = 2131034162;
 			
 			// aapt resource value: 0x7f050033
-			public const int notification_template_icon_group = 2131034163;
+			public const int notification_template_big_media_narrow_custom = 2131034163;
 			
 			// aapt resource value: 0x7f050034
-			public const int notification_template_lines_media = 2131034164;
+			public const int notification_template_custom_big = 2131034164;
 			
 			// aapt resource value: 0x7f050035
-			public const int notification_template_media = 2131034165;
+			public const int notification_template_icon_group = 2131034165;
 			
 			// aapt resource value: 0x7f050036
-			public const int notification_template_media_custom = 2131034166;
+			public const int notification_template_lines_media = 2131034166;
 			
 			// aapt resource value: 0x7f050037
-			public const int notification_template_part_chronometer = 2131034167;
+			public const int notification_template_media = 2131034167;
 			
 			// aapt resource value: 0x7f050038
-			public const int notification_template_part_time = 2131034168;
+			public const int notification_template_media_custom = 2131034168;
 			
 			// aapt resource value: 0x7f050039
-			public const int RegistrationView = 2131034169;
+			public const int notification_template_part_chronometer = 2131034169;
 			
 			// aapt resource value: 0x7f05003a
-			public const int select_dialog_item_material = 2131034170;
+			public const int notification_template_part_time = 2131034170;
 			
 			// aapt resource value: 0x7f05003b
-			public const int select_dialog_multichoice_material = 2131034171;
+			public const int NotificationsView = 2131034171;
 			
 			// aapt resource value: 0x7f05003c
-			public const int select_dialog_singlechoice_material = 2131034172;
+			public const int ProfileView = 2131034172;
 			
 			// aapt resource value: 0x7f05003d
-			public const int SplashScreen = 2131034173;
+			public const int RegistrationView = 2131034173;
 			
 			// aapt resource value: 0x7f05003e
-			public const int support_simple_spinner_dropdown_item = 2131034174;
+			public const int SearchView = 2131034174;
 			
 			// aapt resource value: 0x7f05003f
-			public const int toolbar = 2131034175;
+			public const int select_dialog_item_material = 2131034175;
 			
 			// aapt resource value: 0x7f050040
-			public const int tooltip = 2131034176;
+			public const int select_dialog_multichoice_material = 2131034176;
 			
 			// aapt resource value: 0x7f050041
-			public const int WelcomeView = 2131034177;
+			public const int select_dialog_singlechoice_material = 2131034177;
+			
+			// aapt resource value: 0x7f050042
+			public const int SplashScreen = 2131034178;
+			
+			// aapt resource value: 0x7f050043
+			public const int support_simple_spinner_dropdown_item = 2131034179;
+			
+			// aapt resource value: 0x7f050044
+			public const int toolbar = 2131034180;
+			
+			// aapt resource value: 0x7f050045
+			public const int tooltip = 2131034181;
+			
+			// aapt resource value: 0x7f050046
+			public const int WelcomeView = 2131034182;
 			
 			static Layout()
 			{

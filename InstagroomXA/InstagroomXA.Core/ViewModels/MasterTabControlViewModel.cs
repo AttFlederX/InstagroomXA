@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
 using MvvmCross.Plugins.Messenger;
+using MvvmCross.Core.Navigation;
 
 using InstagroomXA.Core.Contracts;
 using InstagroomXA.Core.ViewModels;
@@ -23,6 +24,13 @@ namespace InstagroomXA.Core.ViewModels
         private readonly Lazy<NewPostViewModel> _newPostViewModel;
         private readonly Lazy<NotificationsViewModel> _notificationsViewModel;
         private readonly Lazy<ProfileViewModel> _profileViewModel;
+
+        public FeedViewModel FeedVM { get => _feedViewModel.Value; }
+        public SearchViewModel SearchVM { get => _searchViewModel.Value; }
+        public NewPostViewModel NewPostVM { get => _newPostViewModel.Value; }
+        public NotificationsViewModel NotificationsVM { get => _notificationsViewModel.Value; }
+        public ProfileViewModel ProfileVM { get => _profileViewModel.Value; }
+
 
         public MasterTabControlViewModel(IMvxMessenger messenger) : base(messenger)
         {
