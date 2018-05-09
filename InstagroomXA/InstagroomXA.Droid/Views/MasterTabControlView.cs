@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Android.Support.Design;
 
 using InstagroomXA.Core.ViewModels;
 
@@ -25,6 +26,9 @@ namespace InstagroomXA.Droid.Views
 
             // Create your application here
             SetContentView(Resource.Layout.MasterTabControlView);
+
+            var tabControl = FindViewById<Android.Support.Design.Widget.BottomNavigationView>(Resource.Id.masterBottomNavigationView);
+            tabControl.InflateMenu(Resource.Drawable.masterBottomTabMenu);
         }
     }
 }

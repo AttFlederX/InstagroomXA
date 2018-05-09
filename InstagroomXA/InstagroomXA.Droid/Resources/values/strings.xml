@@ -20,4 +20,11 @@
   <string name="repeatPasswordString">Repeat password</string>
   <string name="createAccountButtonText">Create New Account</string>
   <string name="loginText">Have an account?</string>
+
+  <!--Master tab view strings-->
+  <string name="feedString">Feed</string>
+  <string name="searchString">Search</string>
+  <string name="newPostString">New post</string>
+  <string name="notificationsString">Notifications</string>
+  <string name="profileString">Profile</string>
 </resources>
