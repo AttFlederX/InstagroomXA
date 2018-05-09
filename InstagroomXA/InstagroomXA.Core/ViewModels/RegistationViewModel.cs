@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using MvvmCross.Core.ViewModels;
+using MvvmCross.Plugins.Messenger;
 
 using InstagroomXA.Core.Contracts;
 using InstagroomXA.Core.Model;
@@ -14,7 +15,7 @@ namespace InstagroomXA.Core.ViewModels
     /// <summary>
     /// Registration screen view model
     /// </summary>
-    public class RegistationViewModel : MvxViewModel
+    public class RegistationViewModel : BaseViewModel
     {
         private IUserDataService _userDataService;
         private IDialogService _dialogService;
@@ -163,7 +164,8 @@ namespace InstagroomXA.Core.ViewModels
         }
         #endregion
 
-        public RegistationViewModel(IUserDataService userDataService, IDialogService dialogService, IValidationService validationService)
+        public RegistationViewModel(IMvxMessenger messenger, IUserDataService userDataService, IDialogService dialogService, 
+            IValidationService validationService) : base(messenger)
         {
             _userDataService = userDataService;
             _dialogService = dialogService;

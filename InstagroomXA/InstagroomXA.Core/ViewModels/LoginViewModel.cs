@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using MvvmCross.Core.ViewModels;
+using MvvmCross.Plugins.Messenger;
 
 using InstagroomXA.Core.Contracts;
 
@@ -13,7 +14,7 @@ namespace InstagroomXA.Core.ViewModels
     /// <summary>
     /// Log in screen view model
     /// </summary>
-    public class LoginViewModel : MvxViewModel
+    public class LoginViewModel : BaseViewModel
     {
         private IUserDataService _userDataService;
         private IDialogService _dialogService;
@@ -106,7 +107,7 @@ namespace InstagroomXA.Core.ViewModels
         }
         #endregion
 
-        public LoginViewModel(IUserDataService userDataService, IDialogService dialogService)
+        public LoginViewModel(IMvxMessenger messenger, IUserDataService userDataService, IDialogService dialogService) : base(messenger)
         {
             _userDataService = userDataService;
             _dialogService = dialogService;

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
+using MvvmCross.Plugins.Messenger;
 
 using InstagroomXA.Core.Contracts;
 using InstagroomXA.Core.ViewModels;
@@ -15,7 +16,7 @@ namespace InstagroomXA.Core.ViewModels
     /// <summary>
     /// View model for the tab container page 
     /// </summary>
-    public class MasterTabControlViewModel : MvxViewModel
+    public class MasterTabControlViewModel : BaseViewModel
     {
         private readonly Lazy<FeedViewModel> _feedViewModel;
         private readonly Lazy<SearchViewModel> _searchViewModel;
@@ -23,7 +24,7 @@ namespace InstagroomXA.Core.ViewModels
         private readonly Lazy<NotificationsViewModel> _notificationsViewModel;
         private readonly Lazy<ProfileViewModel> _profileViewModel;
 
-        public MasterTabControlViewModel()
+        public MasterTabControlViewModel(IMvxMessenger messenger) : base(messenger)
         {
             _feedViewModel = new Lazy<FeedViewModel>(Mvx.IocConstruct<FeedViewModel>);
             _searchViewModel = new Lazy<SearchViewModel>(Mvx.IocConstruct<SearchViewModel>);

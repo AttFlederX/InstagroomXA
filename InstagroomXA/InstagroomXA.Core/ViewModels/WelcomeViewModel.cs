@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using MvvmCross.Core.ViewModels;
+using MvvmCross.Plugins.Messenger;
 
 namespace InstagroomXA.Core.ViewModels
 {
@@ -12,7 +13,7 @@ namespace InstagroomXA.Core.ViewModels
     /// Welcome screen view model
     /// Includes two commands for 'Log in' & 'Register' buttons
     /// </summary>
-    public class WelcomeViewModel : MvxViewModel
+    public class WelcomeViewModel : BaseViewModel
     {
         #region Commands
         public IMvxCommand LoginCommand
@@ -32,6 +33,6 @@ namespace InstagroomXA.Core.ViewModels
         }
         #endregion
 
-        public WelcomeViewModel() { }
+        public WelcomeViewModel(IMvxMessenger messenger) : base(messenger) { }
     }
 }
