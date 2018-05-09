@@ -148,11 +148,17 @@ namespace InstagroomXA.Core.ViewModels
                     };
 
                     await _userDataService.AddUserAsync(newUserProfile);
-                    await _dialogService.ShowAlertAsync("Your account has been registered", "Success", "OK");
-
-
-                    Close(this);
+                    // close the page after the user presses OK
+                    await _dialogService.ShowAlertAsync("Your account has been registered", "Success", "OK", () => Close(this));
                 }
+            });
+        }
+
+        public IMvxCommand LoginCommand
+        {
+            get => new MvxCommand(() =>
+            {
+                ShowViewModel<LoginViewModel>();
             });
         }
         #endregion

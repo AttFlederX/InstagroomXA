@@ -57,7 +57,7 @@ namespace InstagroomXA.Core.ViewModels
         #region Commands 
         public IMvxCommand LoginCommand
         {
-            get => new MvxCommand(async () =>  
+            get => new MvxCommand(async () =>
             {
                 if (string.IsNullOrWhiteSpace(Username))
                 {
@@ -72,6 +72,7 @@ namespace InstagroomXA.Core.ViewModels
                     {
                         _userDataService.CurrentUser = user;
                         // transfer to the master tabbed page
+                        ShowViewModel<MasterTabControlViewModel>();
                     }
                     else
                     {

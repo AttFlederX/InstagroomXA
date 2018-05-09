@@ -26,16 +26,15 @@ namespace InstagroomXA.Droid.Services
         protected Activity CurrentActivity =>
             Mvx.Resolve<IMvxAndroidCurrentTopActivity>().Activity;
 
-        public Task ShowAlertAsync(string message,
-            string title, string buttonText)
+        public async Task ShowAlertAsync(string message, string title, string buttonText, Action okCallback = null)
         {
-            return Task.Run(() =>
+            await Task.Run(() =>
             {
-                Alert(message, title, buttonText);
+                Alert(message, title, buttonText, okCallback);
             });
         }
 
-        private void Alert(string message, string title, string okButton)
+        private void Alert(string message, string title, string okButton, Action okCallback = null)
         {
             Application.SynchronizationContext.Post(ignored =>
             {
@@ -44,7 +43,7 @@ namespace InstagroomXA.Droid.Services
                     (Android.Resource.Attribute.AlertDialogIcon);
                 builder.SetTitle(title);
                 builder.SetMessage(message);
-                builder.SetPositiveButton(okButton, delegate { });
+                builder.SetPositiveButton(okButton, delegate { if (okCallback != null) { okCallback(); } });
                 builder.Create().Show();
             }, null);
         }
