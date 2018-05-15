@@ -4,11 +4,15 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <include
+        android:id="@+id/masterToolbar"
+        layout="@layout/BaseToolbar" />
     <FrameLayout
         android:id="@+id/content_frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/masterBottomNavigationView" />
+        android:layout_above="@+id/masterBottomNavigationView"
+        android:layout_below="@id/masterToolbar" />
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/masterBottomNavigationView"
         android:layout_width="match_parent"

@@ -4,35 +4,35 @@
   <item
       android:id="@+id/menu_feed"
       android:enabled="true"
-      android:icon="@drawable/ic_action_home"
+      android:icon="@mipmap/ic_action_home"
       android:title="@string/feedString"
       app:showAsAction="ifRoom" />
 
   <item
       android:id="@+id/menu_search"
       android:enabled="true"
-      android:icon="@drawable/ic_action_search"
+      android:icon="@mipmap/ic_action_search"
       android:title="@string/searchString"
       app:showAsAction="ifRoom" />
 
   <item
       android:id="@+id/menu_newPost"
       android:enabled="true"
-      android:icon="@drawable/ic_action_camera_alt"
+      android:icon="@mipmap/ic_action_camera_alt"
       android:title="@string/newPostString"
       app:showAsAction="ifRoom" />
 
   <item
       android:id="@+id/menu_notifs"
       android:enabled="true"
-      android:icon="@drawable/ic_action_notifications"
+      android:icon="@mipmap/ic_action_notifications"
       android:title="@string/notificationsString"
       app:showAsAction="ifRoom" />
 
   <item
     android:id="@+id/menu_profile"
     android:enabled="true"
-    android:icon="@drawable/ic_action_person"
+    android:icon="@mipmap/ic_action_person"
     android:title="@string/profileString"
     app:showAsAction="ifRoom" />
 </menu>

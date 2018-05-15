@@ -187,7 +187,7 @@
     <AndroidResource Include="Resources\layout\SplashScreen.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\toolbar.axml">
+    <AndroidResource Include="Resources\layout\BaseToolbar.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\values\arrays.xml" />
@@ -278,82 +278,92 @@
     <AndroidResource Include="Resources\drawable\facebookButtonStyle.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ic_action_camera_alt.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_action_camera_alt.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ic_action_home.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_action_home.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ic_action_notifications.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_action_notifications.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ic_action_person.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_action_person.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ic_action_search.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_action_search.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\ic_action_camera_alt.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_action_camera_alt.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\ic_action_home.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_action_home.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\ic_action_notifications.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_action_notifications.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\ic_action_person.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_action_person.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\ic_action_search.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_action_search.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-mdpi\ic_action_camera_alt.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_action_camera_alt.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-mdpi\ic_action_home.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_action_home.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-mdpi\ic_action_notifications.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_action_notifications.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-mdpi\ic_action_person.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_action_person.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-mdpi\ic_action_search.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_action_search.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_camera_alt.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_action_camera_alt.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_home.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_action_home.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_notifications.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_action_notifications.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_person.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_action_person.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_search.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_action_search.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_camera_alt.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_home.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_notifications.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_person.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_search.png" />
-  </ItemGroup>
-  <ItemGroup>
+    <Folder Include="Resources\drawable-hdpi\" />
+    <Folder Include="Resources\drawable-mdpi\" />
+    <Folder Include="Resources\drawable-xhdpi\" />
+    <Folder Include="Resources\drawable-xxhdpi\" />
     <Folder Include="Resources\menu\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\profileInfoToolbarMenu.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\masterPageStyle.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_action_exit_to_app.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_action_exit_to_app.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_action_exit_to_app.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_action_exit_to_app.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_action_exit_to_app.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Android.Support.Annotations.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Annotations.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Annotations.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Annotations.targets')" />

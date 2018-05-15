@@ -24,17 +24,29 @@ namespace InstagroomXA.Droid.Views
     [Activity(Label = "Instagroom")]
     public class MasterTabControlView : MvxCachingFragmentActivity<MasterTabControlViewModel>
     {
+        Toolbar masterToolbar;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             // Create your application here
             SetContentView(Resource.Layout.MasterTabControlView);
+            masterToolbar = FindViewById<Toolbar>(Resource.Id.masterToolbar);
+            SetActionBar(masterToolbar);
 
             SetMenuStyle();
             
             LoadFragment(Resource.Id.menu_feed);
             // ViewModel.ShowInitialViewModelsCommand.Execute();
+        }
+
+        /// <summary>
+        /// Disable back navigation
+        /// </summary>
+        public override void OnBackPressed()
+        {
+            return;
         }
 
         /// <summary>
@@ -60,7 +72,7 @@ namespace InstagroomXA.Droid.Views
         }
 
         /// <summary>
-        /// Instatiates a fragment with its viewmodel by ID & adds it into the contaent frame
+        /// Instatiates a fragment with its viewmodel by ID & adds it into the content frame
         /// </summary>
         /// <param name="id"></param>
         private void LoadFragment(int id)
@@ -74,26 +86,37 @@ namespace InstagroomXA.Droid.Views
                     tag += "FeedView";
                     fragment = Android.Support.V4.App.Fragment.Instantiate(this, tag);
                     ((MvxFragment)fragment).DataContext = ViewModel.FeedVM;
+
+                    masterToolbar.Visibility = ViewStates.Gone;
                     break;
                 case Resource.Id.menu_search:
                     tag += "SearchView";
                     fragment = Android.Support.V4.App.Fragment.Instantiate(this, tag);
                     ((MvxFragment)fragment).DataContext = ViewModel.SearchVM;
+
+                    masterToolbar.Visibility = ViewStates.Gone;
                     break;
                 case Resource.Id.menu_newPost:
                     tag += "NewPostView";
                     fragment = Android.Support.V4.App.Fragment.Instantiate(this, tag);
                     ((MvxFragment)fragment).DataContext = ViewModel.NewPostVM;
+
+                    masterToolbar.Visibility = ViewStates.Gone;
                     break;
                 case Resource.Id.menu_notifs:
                     tag += "NotificationsView";
                     fragment = Android.Support.V4.App.Fragment.Instantiate(this, tag);
                     ((MvxFragment)fragment).DataContext = ViewModel.NotificationsVM;
+
+                    masterToolbar.Visibility = ViewStates.Gone;
                     break;
                 case Resource.Id.menu_profile:
                     tag += "ProfileView";
                     fragment = Android.Support.V4.App.Fragment.Instantiate(this, tag);
                     ((MvxFragment)fragment).DataContext = ViewModel.ProfileVM;
+
+                    masterToolbar.Visibility = ViewStates.Visible;
+                    ActionBar.Title = "Profile info";
                     break;
             }
 
@@ -104,5 +127,15 @@ namespace InstagroomXA.Droid.Views
                 .Commit();
         }
 
+        /// <summary>
+        /// Inflates the menu for the profile info toolbar
+        /// </summary>
+        /// <param name="menu"></param>
+        /// <returns></returns>
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Drawable.profileInfoToolbarMenu, menu);
+            return base.OnCreateOptionsMenu(menu);
+        }
     }
 }

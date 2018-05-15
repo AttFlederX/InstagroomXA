@@ -13,5 +13,6 @@ namespace InstagroomXA.Core.ViewModels
     /// </summary>
     public class ProfileViewModel : MvxViewModel
     {
+
     }
 }
