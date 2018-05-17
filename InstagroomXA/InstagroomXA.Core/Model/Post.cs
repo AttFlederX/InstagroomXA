@@ -22,7 +22,9 @@ namespace InstagroomXA.Core.Model
         [MaxLength(255)]
         public string ImagePath { get; set; }
 
+        [MaxLength(255)]
         public string Description { get; set; }
+
         public int Likes { get; set; }
     }
 }

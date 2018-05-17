@@ -112,7 +112,7 @@ namespace InstagroomXA.Droid.Views
                     break;
                 case Resource.Id.menu_profile:
                     tag += "ProfileView";
-                    fragment = Android.Support.V4.App.Fragment.Instantiate(this, tag);
+                    fragment = Android.Support.V4.App.Fragment.Instantiate(this, tag); 
                     ((MvxFragment)fragment).DataContext = ViewModel.ProfileVM;
 
                     masterToolbar.Visibility = ViewStates.Visible;

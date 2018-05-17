@@ -17,9 +17,9 @@ namespace InstagroomXA.Core.ViewModels
     /// </summary>
     public class RegistationViewModel : BaseViewModel
     {
-        private IUserDataService _userDataService;
-        private IDialogService _dialogService;
-        private IValidationService _validationService;
+        private readonly IUserDataService _userDataService;
+        private readonly IDialogService _dialogService;
+        private readonly IValidationService _validationService;
 
         private string _username;
         private string _firstName;
@@ -145,7 +145,12 @@ namespace InstagroomXA.Core.ViewModels
                         FirstName = this.FirstName,
                         LastName = this.LastName,
                         Email = this.Email,
-                        Password = this.Password
+                        Password = this.Password,
+                        Followers = new List<int>(),
+                        Following = new List<int>(),
+                        NumOfPosts = 0,
+                        FollowersString = string.Empty,
+                        FollowingString = string.Empty
                     };
 
                     await _userDataService.AddUserAsync(newUserProfile);

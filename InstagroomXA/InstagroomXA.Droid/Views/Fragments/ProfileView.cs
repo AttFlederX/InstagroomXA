@@ -13,6 +13,7 @@ using Android.Widget;
 
 using InstagroomXA.Core.ViewModels;
 
+using MvvmCross.Binding.Droid.BindingContext;
 using MvvmCross.Droid.Shared.Attributes;
 using MvvmCross.Droid.Support.V4;
 
@@ -20,7 +21,7 @@ namespace InstagroomXA.Droid.Views
 {
     [MvxFragment(typeof(MasterTabControlViewModel), Resource.Id.content_frame, true)]
     [Register("instagroomxa.droid.views.ProfileView")]
-    public class ProfileView : MvxFragment
+    public class ProfileView : MvxFragment<ProfileViewModel>
     {
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -33,8 +34,8 @@ namespace InstagroomXA.Droid.Views
         {
             // Use this to return your custom view for this Fragment
             // return inflater.Inflate(Resource.Layout.YourFragment, container, false);
-
-            return inflater.Inflate(Resource.Layout.ProfileView, container, false);
+            base.OnCreateView(inflater, container, savedInstanceState);
+            return this.BindingInflate(Resource.Layout.ProfileView, null);
         }
     }
 }

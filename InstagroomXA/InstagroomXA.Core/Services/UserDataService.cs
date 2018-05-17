@@ -8,6 +8,7 @@ using InstagroomXA.Core.Contracts;
 using InstagroomXA.Core.Model;
 
 using SQLite;
+using SQLiteNetExtensionsAsync.Extensions;
 
 namespace InstagroomXA.Core.Services
 {
@@ -36,7 +37,7 @@ namespace InstagroomXA.Core.Services
         {
             try
             {
-                await _masterConnection.InsertAsync(newUser);
+                await _masterConnection.InsertWithChildrenAsync(newUser);
                 return true;
             }
             catch (Exception ex)
@@ -52,7 +53,7 @@ namespace InstagroomXA.Core.Services
         /// <returns></returns>
         public async Task<User> GetUserByIDAsync(int userId)
         {
-            return await _masterConnection.FindAsync<User>(userId);
+            return await _masterConnection.FindWithChildrenAsync<User>(userId);
         }
 
         /// <summary>
@@ -62,8 +63,8 @@ namespace InstagroomXA.Core.Services
         /// <returns></returns>
         public async Task<User> GetUserByUsernameAsync(string username)
         {
-            var query = _masterConnection.Table<User>().Where(up => (up.Username == username));
-            return await query.FirstOrDefaultAsync();
+            var query = await _masterConnection.GetAllWithChildrenAsync<User>(up => (up.Username == username));
+            return query.FirstOrDefault();
         }
 
         /// <summary>
@@ -73,10 +74,11 @@ namespace InstagroomXA.Core.Services
         /// <returns></returns>
         public async Task<IEnumerable<User>> GetUserByQueryAsync(string queryString)
         {
-            var query = _masterConnection.Table<User>().Where(u => (u.Username.Contains(queryString) || u.FirstName.Contains(queryString) ||
-                                                                    u.LastName.Contains(queryString)));
+            var query = await _masterConnection.GetAllWithChildrenAsync<User>(u => (u.Username.Contains(queryString) || 
+                                                                        u.FirstName.Contains(queryString) ||
+                                                                        u.LastName.Contains(queryString)));
 
-            return await query.ToListAsync();
+            return query.ToList();
         }
 
         /// <summary>
@@ -88,7 +90,7 @@ namespace InstagroomXA.Core.Services
         {
             try
             {
-                await _masterConnection.UpdateAsync(updUser);
+                await _masterConnection.UpdateWithChildrenAsync(updUser);
                 return true;
             }
             catch (Exception ex)

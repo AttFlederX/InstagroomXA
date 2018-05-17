@@ -23,6 +23,12 @@
     <item name="android:textSize">16dp</item>
     <item name="android:textColor">@color/buttonBlue</item>
   </style>
+  
+  <style name="Button.BaseBlueStyle" parent="android:style/Widget.Button">
+    <item name="android:background">@drawable/baseButtonBlueStyle</item>
+    <item name="android:textSize">16dp</item>
+    <item name="android:textColor">@color/primaryText</item>
+  </style>
 
   <style name="Button.FacebookStyle" parent="android:style/Widget.Button">
     <item name="android:background">@drawable/facebookButtonStyle</item>

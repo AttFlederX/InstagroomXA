@@ -16,8 +16,8 @@ namespace InstagroomXA.Core.ViewModels
     /// </summary>
     public class LoginViewModel : BaseViewModel
     {
-        private IUserDataService _userDataService;
-        private IDialogService _dialogService;
+        private readonly IUserDataService _userDataService;
+        private readonly IDialogService _dialogService;
 
         private string _username;
         private string _password;
@@ -71,7 +71,7 @@ namespace InstagroomXA.Core.ViewModels
                 {
                     if (user.Password == Password)
                     {
-                        _userDataService.CurrentUser = user;
+                       _userDataService.CurrentUser = user;
                         // transfer to the master tabbed page
                         ShowViewModel<MasterTabControlViewModel>();
                     }

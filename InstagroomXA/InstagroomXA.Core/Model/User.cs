@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 using SQLite;
+using SQLiteNetExtensions.Attributes;
+using SQLiteNetExtensionsAsync;
 
 namespace InstagroomXA.Core.Model
 {
@@ -26,5 +28,18 @@ namespace InstagroomXA.Core.Model
         public string Password { get; set; }
         [MaxLength(255)]
         public string Email { get; set; }
+
+        [TextBlob("FollowersString")]
+        public List<int> Followers { get; set; }
+        [TextBlob("FollowingString")]
+        public List<int> Following { get; set; }
+
+        public int NumOfPosts { get; set; }
+
+        public string FullName { get => $"{FirstName} {LastName}"; }
+
+        // for serialization
+        public string FollowersString { get; set; }
+        public string FollowingString { get; set; }
     }
 }
