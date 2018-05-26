@@ -64,7 +64,7 @@
                 android:layout_marginTop="10dp"
                 android:textColor="#EEEEEE" />
             <Button
-                android:id="@+id/loginButton"
+                android:id="@+id/loginViaFacebookButton"
                 style="@style/Button.FacebookStyle"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"

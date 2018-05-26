@@ -31,9 +31,16 @@
   <!--Profile info fragment strings-->
   <string name="fullNameFallbackString">Full Name</string>
   <string name="usernameFallbackString">\@username</string>
-  <string name="numOfPostsFallbackString">0 posts</string>
-  <string name="followersFallbackString">0 followers</string>
-  <string name="followingFallbackString">0 following</string>
+  <string name="numOfPostsText">Posts</string>
+  <string name="followersText">Followers</string>
+  <string name="followingText">Following</string>
   <string name="noPostsText">You haven\'t posted anything yet</string>
   <string name="editProfileButtonText">Edit profile</string>
+
+  <!--New post fragment strings-->
+  <string name="descriptionHintString">Add a description</string>
+  <string name="takePhotoButtonText">Take a photo</string>
+  <string name="openGalleryButtonText">Open gallery</string>
+  <string name="postButtonText">Post</string>
+  
 </resources>
