@@ -15,7 +15,8 @@ namespace InstagroomXA.Core.Converters
     {
         protected override string Convert(List<int> value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
-            return $"{value.Count} followers";
+            // return $"{value.Count} followers";
+            return value.Count.ToString();
         }
     }
 }

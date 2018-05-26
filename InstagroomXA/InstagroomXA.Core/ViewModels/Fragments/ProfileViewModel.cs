@@ -21,6 +21,8 @@ namespace InstagroomXA.Core.ViewModels
         private readonly IPostDataService _postDataService;
 
         private User _currentUser;
+        private MvxObservableCollection<Post> _postList;
+        private Post _selectedPost;
         private int _isPostListEmpty;
 
         #region Bindable properties
@@ -34,13 +36,33 @@ namespace InstagroomXA.Core.ViewModels
             }
         }
 
+        public MvxObservableCollection<Post> PostList
+        {
+            get => _postList;
+            set
+            {
+                _postList = value;
+                RaisePropertyChanged(() => PostList);
+            }
+        }
+
+        public Post SelectedPost
+        {
+            get => _selectedPost;
+            set
+            {
+                _selectedPost = value;
+                RaisePropertyChanged(() => SelectedPost);
+            }
+        }
+
         public int IsPostListEmpty // for textview visibility
         {
             get => _isPostListEmpty;
             set
             {
                 _isPostListEmpty = value;
-                RaisePropertyChanged(() => CurrentUser);
+                RaisePropertyChanged(() => IsPostListEmpty);
             }
         }
         #endregion
@@ -63,6 +85,15 @@ namespace InstagroomXA.Core.ViewModels
 
             CurrentUser = _userDataService.CurrentUser;
             IsPostListEmpty = (CurrentUser.NumOfPosts == 0) ? 0 : 8; // int values taken from ViewStates enum
+        }
+
+        /// <summary>
+        /// Method for asynchronous post data fetch
+        /// </summary>
+        /// <returns></returns>
+        protected override async Task InitializeAsync()
+        {
+            PostList = new MvxObservableCollection<Post>(await _postDataService.GetUserPosts(CurrentUser.ID, 30));
         }
     }
 }
