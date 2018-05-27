@@ -245,6 +245,9 @@
   <ItemGroup>
     <Compile Include="Bootstrap\MessengerPluginBootstrap.cs" />
     <Compile Include="DebugTrace.cs" />
+    <Compile Include="Extensions\UriExtension.cs" />
+    <Compile Include="Helpers\BitmapHelper.cs" />
+    <Compile Include="Helpers\CameraDataHelper.cs" />
     <Compile Include="LinkerPleaseInclude.cs" />
     <Compile Include="Services\DBConnectionService.cs" />
     <Compile Include="Services\DialogService.cs" />

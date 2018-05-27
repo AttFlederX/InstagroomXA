@@ -34,6 +34,7 @@ namespace InstagroomXA.Droid
             base.InitializeIoC();
             Mvx.RegisterSingleton<IDialogService>(() => new DialogService());
             Mvx.RegisterSingleton<IDBConnectionService>(() => new DBConnectionService());
+            // Mvx.RegisterSingleton<ICameraService>(() => new CameraService());
         }
     }
 }

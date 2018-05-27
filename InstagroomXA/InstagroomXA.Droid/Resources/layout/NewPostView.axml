@@ -32,7 +32,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:textColorHint="@color/secondaryText"
-        app:MvxBind="Text Description, Mode=TwoWay" />
+        app:MvxBind="Text NewPost.Description, Mode=TwoWay" />
     <Button
         android:id="@+id/takePhotoButton"
         style="@style/Button.BaseBlueStyle"
@@ -45,8 +45,7 @@
         android:text="@string/takePhotoButtonText"
         app:layout_constraintEnd_toStartOf="@+id/middleVerticalGuideline"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/middleHorizontalGuideline"
-        app:MvxBind="Click TakePhotoCommand" />
+        app:layout_constraintTop_toTopOf="@+id/middleHorizontalGuideline" />
     <Button
         android:id="@+id/openGalleryButton"
         style="@style/Button.BaseBlueStyle"
@@ -59,8 +58,7 @@
         android:text="@string/openGalleryButtonText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/middleVerticalGuideline"
-        app:layout_constraintTop_toTopOf="@+id/middleHorizontalGuideline"
-        app:MvxBind="Click OpenGalleryCommand" />
+        app:layout_constraintTop_toTopOf="@+id/middleHorizontalGuideline" />
     <Button
         android:id="@+id/postButton"
         style="@style/Button.BaseStyle"
@@ -70,8 +68,7 @@
         android:text="@string/postButtonText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:MvxBind="Click PostCommand" />
+        app:layout_constraintStart_toStartOf="parent" />
     <ImageView
         android:id="@+id/postImageView"
         android:layout_width="0dp"

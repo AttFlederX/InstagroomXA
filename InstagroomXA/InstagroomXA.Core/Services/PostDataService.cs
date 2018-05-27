@@ -8,6 +8,7 @@ using InstagroomXA.Core.Contracts;
 using InstagroomXA.Core.Model;
 
 using SQLite;
+using SQLiteNetExtensionsAsync.Extensions;
 
 namespace InstagroomXA.Core.Services
 {
@@ -32,7 +33,8 @@ namespace InstagroomXA.Core.Services
         /// <returns></returns>
         public async Task<Post> GetPostByIDAsync(int postId)
         {
-            return await _masterConnection.FindAsync<Post>(postId);
+            // return await _masterConnection.FindAsync<Post>(postId);
+            return await _masterConnection.FindWithChildrenAsync<Post>(postId);
         }
 
         /// <summary>
@@ -45,6 +47,11 @@ namespace InstagroomXA.Core.Services
             var query = _masterConnection.Table<Post>().Where(p => (p.UserID == userId));
             if (n != 0) { query = query.Take(n); }
             return await query.ToListAsync();
+
+            // finds all the user posts, n is irrelevant
+            //var query = await _masterConnection.GetAllWithChildrenAsync<Post>(p => (p.UserID == userId));
+
+            //return query.ToList();
         }
 
         /// <summary>
@@ -56,7 +63,8 @@ namespace InstagroomXA.Core.Services
         {
             try
             {
-                await _masterConnection.InsertAsync(newPost);
+                // await _masterConnection.InsertAsync(newPost);
+                await _masterConnection.InsertWithChildrenAsync(newPost);
                 return true;
             }
             catch (Exception ex)
@@ -74,7 +82,8 @@ namespace InstagroomXA.Core.Services
         {
             try
             {
-                await _masterConnection.UpdateAsync(updPost);
+                // await _masterConnection.UpdateAsync(updPost);
+                await _masterConnection.UpdateWithChildrenAsync(updPost);
                 return true;
             }
             catch (Exception ex)

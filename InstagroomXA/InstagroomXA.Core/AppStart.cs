@@ -16,11 +16,18 @@ namespace InstagroomXA.Core
     {
         public async void Start(object hint = null)
         {
-            //hardcoded login for this demo
+            // hardcoded login for quicker launch
             //var userService = Mvx.Resolve<IUserDataService>();
-            //await userService.Login("gillcleeren", "123456");
-
-            ShowViewModel<WelcomeViewModel>();
+            //var user = await userService.GetUserByIDAsync(1);
+            //if (user != null)
+            //{
+            //    userService.CurrentUser = user;
+            //    ShowViewModel<MasterTabControlViewModel>();
+            //}
+            //else
+            //{
+                ShowViewModel<WelcomeViewModel>();
+            //}
         }
     }
 }

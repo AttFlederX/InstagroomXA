@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using InstagroomXA.Core.Contracts;
+using InstagroomXA.Core.Model;
 
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Plugins.Messenger;
@@ -21,16 +22,16 @@ namespace InstagroomXA.Core.ViewModels
         private readonly IPostDataService _postDataService;
         private readonly IDialogService _dialogService;
 
-        private string _description;
+        private Post _newPost;
 
         #region Bindable properties
-        public string Description
+        public Post NewPost
         {
-            get => _description;
+            get => _newPost;
             set
             {
-                _description = value;
-                RaisePropertyChanged(() => Description);
+                _newPost = value;
+                RaisePropertyChanged(() => NewPost);
             }
         }
         #endregion
@@ -56,7 +57,27 @@ namespace InstagroomXA.Core.ViewModels
         {
             get => new MvxCommand(() =>
             {
-                
+                if (!string.IsNullOrEmpty(NewPost.ImagePath))
+                {
+                    // add a new post
+                    var newPost = new Post()
+                    {
+                        Description = NewPost.Description,
+                        ImagePath = NewPost.ImagePath,
+                        Likes = 0,
+                        PostTime = DateTime.Now,
+                        UserID = _userDataService.CurrentUser.ID
+                    };
+
+                    _postDataService.AddPostAsync(newPost);
+                    NewPost = new Post()
+                    {
+                        Description = string.Empty
+                    };
+
+                    _dialogService.ShowAlertAsync("Your post has been published successfully", "New post", "OK");
+                }
+                else { _dialogService.ShowAlertAsync("Please add an image", "Error", "OK"); }
             });
         }
         #endregion
@@ -67,6 +88,11 @@ namespace InstagroomXA.Core.ViewModels
             _userDataService = userDataService;
             _postDataService = postDataService;
             _dialogService = dialogService;
+
+            NewPost = new Post()
+            {
+                Description = string.Empty
+            };
         }
     }
 }

@@ -45,6 +45,7 @@
     <Compile Include="Converters\FollowingToStringConverter.cs" />
     <Compile Include="Converters\NumOfPostsToStringConverter.cs" />
     <Compile Include="Converters\UsernameToHandleConverter.cs" />
+    <Compile Include="Helpers\ConstantHelper.cs" />
     <Compile Include="Model\Post.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
