@@ -133,6 +133,12 @@
     <PackageReference Include="MvvmCross">
       <Version>5.0.6</Version>
     </PackageReference>
+    <PackageReference Include="MvvmCross.Plugin.DownloadCache">
+      <Version>5.0.6</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Plugin.File">
+      <Version>5.0.6</Version>
+    </PackageReference>
     <PackageReference Include="MvvmCross.Plugin.Messenger">
       <Version>5.0.6</Version>
     </PackageReference>

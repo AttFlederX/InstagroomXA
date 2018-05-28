@@ -39,6 +39,8 @@ namespace InstagroomXA.Core.ViewModels
             _newPostViewModel = new Lazy<NewPostViewModel>(Mvx.IocConstruct<NewPostViewModel>);
             _notificationsViewModel = new Lazy<NotificationsViewModel>(Mvx.IocConstruct<NotificationsViewModel>);
             _profileViewModel = new Lazy<ProfileViewModel>(Mvx.IocConstruct<ProfileViewModel>);
+
+            // _profileViewModel.Value.Start();
         }
     }
 }

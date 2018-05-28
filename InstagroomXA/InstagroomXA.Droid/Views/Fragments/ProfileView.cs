@@ -7,15 +7,18 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
+using Android.Support.V7.Widget;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
 
+using InstagroomXA.Core.Helpers;
 using InstagroomXA.Core.ViewModels;
 
 using MvvmCross.Binding.Droid.BindingContext;
 using MvvmCross.Droid.Shared.Attributes;
 using MvvmCross.Droid.Support.V4;
+using MvvmCross.Droid.Support.V7.RecyclerView;
 
 namespace InstagroomXA.Droid.Views
 {
@@ -33,8 +36,19 @@ namespace InstagroomXA.Droid.Views
         {
             // Use this to return your custom view for this Fragment
             // return inflater.Inflate(Resource.Layout.YourFragment, container, false);
+
             base.OnCreateView(inflater, container, savedInstanceState);
-            return this.BindingInflate(Resource.Layout.ProfileView, null);
+            var view = this.BindingInflate(Resource.Layout.ProfileView, null);
+
+            var postsRecyclerView = view.FindViewById<MvxRecyclerView>(Resource.Id.postsRecyclerView);
+            if (postsRecyclerView != null)
+            {
+                postsRecyclerView.HasFixedSize = true;
+                var layoutManager = new GridLayoutManager(Activity, ConstantHelper.AndroidProfilePostsRecyclerViewColumnNum);
+                postsRecyclerView.SetLayoutManager(layoutManager);
+            }
+
+            return view;
         }
     }
 }

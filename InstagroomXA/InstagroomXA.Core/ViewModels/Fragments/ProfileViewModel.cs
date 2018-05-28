@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using InstagroomXA.Core.Contracts;
+using InstagroomXA.Core.Helpers;
 using InstagroomXA.Core.Model;
 
 using MvvmCross.Core.ViewModels;
@@ -22,7 +23,7 @@ namespace InstagroomXA.Core.ViewModels
 
         private User _currentUser;
         private MvxObservableCollection<Post> _postList;
-        private Post _selectedPost;
+        // private Post _selectedPost;
         private int _isPostListEmpty;
 
         #region Bindable properties
@@ -46,15 +47,15 @@ namespace InstagroomXA.Core.ViewModels
             }
         }
 
-        public Post SelectedPost
-        {
-            get => _selectedPost;
-            set
-            {
-                _selectedPost = value;
-                RaisePropertyChanged(() => SelectedPost);
-            }
-        }
+        //public Post SelectedPost
+        //{
+        //    get => _selectedPost;
+        //    set
+        //    {
+        //        _selectedPost = value;
+        //        RaisePropertyChanged(() => SelectedPost);
+        //    }
+        //}
 
         public int IsPostListEmpty // for textview visibility
         {
@@ -75,6 +76,14 @@ namespace InstagroomXA.Core.ViewModels
                 // ShowViewModel<LoginViewModel>();
             });
         }
+
+        public IMvxCommand PostSelectedCommand
+        {
+            get => new MvxCommand(async () =>
+            {
+                ShowViewModel<LoginViewModel>();
+            });
+        }
         #endregion
 
         public ProfileViewModel(IMvxMessenger messenger, IUserDataService userDataService, 
@@ -84,7 +93,13 @@ namespace InstagroomXA.Core.ViewModels
             _postDataService = postDataService;
 
             CurrentUser = _userDataService.CurrentUser;
-            IsPostListEmpty = (CurrentUser.NumOfPosts == 0) ? 0 : 8; // int values taken from ViewStates enum
+        }
+
+
+        public override async void Start()
+        {
+            base.Start();
+            await ReloadDataAsync();
         }
 
         /// <summary>
@@ -93,7 +108,9 @@ namespace InstagroomXA.Core.ViewModels
         /// <returns></returns>
         protected override async Task InitializeAsync()
         {
-            PostList = new MvxObservableCollection<Post>(await _postDataService.GetUserPosts(CurrentUser.ID, 30));
+            PostList = new MvxObservableCollection<Post>((await _postDataService.GetUserPosts(_userDataService.CurrentUser.ID, 
+                ConstantHelper.InitialPostsNum)).Reverse());
+            IsPostListEmpty = (CurrentUser.NumOfPosts == 0) ? 0 : 8; // int values taken from ViewStates enum
         }
     }
 }

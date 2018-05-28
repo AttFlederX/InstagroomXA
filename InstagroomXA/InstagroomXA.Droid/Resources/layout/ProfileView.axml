@@ -12,13 +12,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/middleVerticalGuideline"
-            local:layout_constraintGuide_percent=".37"
+            local:layout_constraintGuide_percent=".39"
             android:orientation="vertical" />
         <android.support.constraint.Guideline
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/middleHorizontalGuideline"
-            local:layout_constraintGuide_percent=".50"
+            local:layout_constraintGuide_percent=".45"
             android:orientation="horizontal" />
     <!--to be replaced w/ profile image-->
         <View
@@ -158,6 +158,16 @@
             local:layout_constraintEnd_toEndOf="parent"
             local:layout_constraintStart_toStartOf="parent"
             android:background="@color/divider" />
+        <MvvmCross.Droid.Support.V7.RecyclerView.MvxRecyclerView
+            android:id="@+id/postsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            local:layout_constraintTop_toBottomOf="@+id/horizontalDivider"
+            local:layout_constraintEnd_toEndOf="parent"
+            local:layout_constraintStart_toStartOf="parent"
+            local:layout_constraintBottom_toBottomOf="parent"
+            local:MvxItemTemplate="@layout/profilepostlistitem"
+            local:MvxBind="ItemsSource PostList; ItemClick PostSelectedCommand" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

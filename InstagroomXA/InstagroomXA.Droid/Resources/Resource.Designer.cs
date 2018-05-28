@@ -4331,8 +4331,8 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0a008d
 			public const int edit_query = 2131361933;
 			
-			// aapt resource value: 0x7f0a00d2
-			public const int emailEditText = 2131362002;
+			// aapt resource value: 0x7f0a00d3
+			public const int emailEditText = 2131362003;
 			
 			// aapt resource value: 0x7f0a0032
 			public const int end = 2131361842;
@@ -4364,8 +4364,8 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0a004a
 			public const int fill_vertical = 2131361866;
 			
-			// aapt resource value: 0x7f0a00d0
-			public const int firstNameEditText = 2131362000;
+			// aapt resource value: 0x7f0a00d1
+			public const int firstNameEditText = 2131362001;
 			
 			// aapt resource value: 0x7f0a0056
 			public const int @fixed = 2131361878;
@@ -4415,8 +4415,8 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0a009c
 			public const int largeLabel = 2131361948;
 			
-			// aapt resource value: 0x7f0a00d1
-			public const int lastNameEditText = 2131362001;
+			// aapt resource value: 0x7f0a00d2
+			public const int lastNameEditText = 2131362002;
 			
 			// aapt resource value: 0x7f0a004b
 			public const int left = 2131361867;
@@ -4442,8 +4442,8 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0a00aa
 			public const int logoTextView = 2131361962;
 			
-			// aapt resource value: 0x7f0a00d6
-			public const int masked = 2131362006;
+			// aapt resource value: 0x7f0a00d7
+			public const int masked = 2131362007;
 			
 			// aapt resource value: 0x7f0a00b3
 			public const int masterBottomNavigationView = 2131361971;
@@ -4457,26 +4457,26 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0a00c1
 			public const int media_actions = 2131361985;
 			
-			// aapt resource value: 0x7f0a00d7
-			public const int menu_feed = 2131362007;
-			
-			// aapt resource value: 0x7f0a00d9
-			public const int menu_newPost = 2131362009;
+			// aapt resource value: 0x7f0a00d8
+			public const int menu_feed = 2131362008;
 			
 			// aapt resource value: 0x7f0a00da
-			public const int menu_notifs = 2131362010;
+			public const int menu_newPost = 2131362010;
 			
 			// aapt resource value: 0x7f0a00db
-			public const int menu_profile = 2131362011;
-			
-			// aapt resource value: 0x7f0a00d8
-			public const int menu_search = 2131362008;
+			public const int menu_notifs = 2131362011;
 			
 			// aapt resource value: 0x7f0a00dc
-			public const int menu_signOut = 2131362012;
+			public const int menu_profile = 2131362012;
 			
-			// aapt resource value: 0x7f0a00d4
-			public const int message = 2131362004;
+			// aapt resource value: 0x7f0a00d9
+			public const int menu_search = 2131362009;
+			
+			// aapt resource value: 0x7f0a00dd
+			public const int menu_signOut = 2131362013;
+			
+			// aapt resource value: 0x7f0a00d5
+			public const int message = 2131362005;
 			
 			// aapt resource value: 0x7f0a0033
 			public const int middle = 2131361843;
@@ -4547,6 +4547,9 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0a00ba
 			public const int postImageView = 2131361978;
 			
+			// aapt resource value: 0x7f0a00d0
+			public const int postsRecyclerView = 2131362000;
+			
 			// aapt resource value: 0x7f0a0006
 			public const int progress_circular = 2131361798;
 			
@@ -4559,8 +4562,8 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0a00af
 			public const int registerButton = 2131361967;
 			
-			// aapt resource value: 0x7f0a00d3
-			public const int repeatPasswordEditText = 2131362003;
+			// aapt resource value: 0x7f0a00d4
+			public const int repeatPasswordEditText = 2131362004;
 			
 			// aapt resource value: 0x7f0a004c
 			public const int right = 2131361868;
@@ -4778,8 +4781,8 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0a0016
 			public const int view_offset_helper = 2131361814;
 			
-			// aapt resource value: 0x7f0a00d5
-			public const int visible = 2131362005;
+			// aapt resource value: 0x7f0a00d6
+			public const int visible = 2131362006;
 			
 			// aapt resource value: 0x7f0a003e
 			public const int withText = 2131361854;

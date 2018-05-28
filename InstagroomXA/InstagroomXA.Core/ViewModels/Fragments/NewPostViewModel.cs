@@ -55,7 +55,7 @@ namespace InstagroomXA.Core.ViewModels
 
         public IMvxCommand PostCommand
         {
-            get => new MvxCommand(() =>
+            get => new MvxCommand(async () =>
             {
                 if (!string.IsNullOrEmpty(NewPost.ImagePath))
                 {
@@ -69,15 +69,18 @@ namespace InstagroomXA.Core.ViewModels
                         UserID = _userDataService.CurrentUser.ID
                     };
 
-                    _postDataService.AddPostAsync(newPost);
+                    await _postDataService.AddPostAsync(newPost);
+                    _userDataService.CurrentUser.NumOfPosts++;
+                    await _userDataService.UpdateUserAsync(_userDataService.CurrentUser);
+
                     NewPost = new Post()
                     {
                         Description = string.Empty
                     };
 
-                    _dialogService.ShowAlertAsync("Your post has been published successfully", "New post", "OK");
+                    await _dialogService.ShowAlertAsync("Your post has been published successfully", "New post", "OK");
                 }
-                else { _dialogService.ShowAlertAsync("Please add an image", "Error", "OK"); }
+                else { await _dialogService.ShowAlertAsync("Please add an image", "Error", "OK"); }
             });
         }
         #endregion
