@@ -279,6 +279,7 @@
     <Compile Include="Views\Fragments\NewPostView.cs" />
     <Compile Include="Views\Fragments\NotificationsView.cs" />
     <Compile Include="Views\Fragments\ProfileView.cs" />
+    <Compile Include="Views\PostView.cs" />
     <Compile Include="Views\RegistrationView.cs" />
     <Compile Include="Views\Fragments\SearchView.cs" />
     <Compile Include="Views\WelcomeView.cs" />
@@ -396,7 +397,42 @@
     <AndroidResource Include="Resources\drawable\baseButtonBlueStyle.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\ProfilePostListItem.axml">
+    <AndroidResource Include="Resources\layout\profilepost_listitem.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_action_send.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_action_send.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_action_send.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_action_send.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_action_send.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_thumb_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_thumb_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_thumb_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_thumb_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_thumb_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\PostView.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

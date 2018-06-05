@@ -34,6 +34,16 @@ namespace InstagroomXA.Core.ViewModels
                 RaisePropertyChanged(() => NewPost);
             }
         }
+
+        //public string Description
+        //{
+        //    get => _description;
+        //    set
+        //    {
+        //        _description = value;
+        //        RaisePropertyChanged(() => Description);
+        //    }
+        //}
         #endregion
 
         #region Commands 
@@ -49,7 +59,7 @@ namespace InstagroomXA.Core.ViewModels
         {
             get => new MvxCommand(() =>
             {
-                // fetch the data from Facebook API
+
             });
         }
 
@@ -75,8 +85,10 @@ namespace InstagroomXA.Core.ViewModels
 
                     NewPost = new Post()
                     {
+                        ImagePath = string.Empty,
                         Description = string.Empty
                     };
+                    
 
                     await _dialogService.ShowAlertAsync("Your post has been published successfully", "New post", "OK");
                 }
@@ -94,6 +106,7 @@ namespace InstagroomXA.Core.ViewModels
 
             NewPost = new Post()
             {
+                ImagePath = string.Empty,
                 Description = string.Empty
             };
         }

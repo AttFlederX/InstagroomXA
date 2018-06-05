@@ -79,9 +79,9 @@ namespace InstagroomXA.Core.ViewModels
 
         public IMvxCommand PostSelectedCommand
         {
-            get => new MvxCommand(async () =>
+            get => new MvxCommand<Post>(selectedPost =>
             {
-                ShowViewModel<LoginViewModel>();
+                ShowViewModel<PostViewModel>(new { postId = selectedPost.ID, userId = -1 });
             });
         }
         #endregion

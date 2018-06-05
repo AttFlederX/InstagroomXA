@@ -41,11 +41,15 @@
     <Compile Include="Contracts\IPostDataService.cs" />
     <Compile Include="Contracts\IUserDataService.cs" />
     <Compile Include="Contracts\IValidationService.cs" />
+    <Compile Include="Converters\DateTimeToStringConverter.cs" />
     <Compile Include="Converters\FollowersToStringConverter.cs" />
     <Compile Include="Converters\FollowingToStringConverter.cs" />
+    <Compile Include="Converters\NumOfCommentsToStringConverter.cs" />
     <Compile Include="Converters\NumOfPostsToStringConverter.cs" />
     <Compile Include="Converters\UsernameToHandleConverter.cs" />
     <Compile Include="Helpers\ConstantHelper.cs" />
+    <Compile Include="Model\Comment.cs" />
+    <Compile Include="Model\Notification.cs" />
     <Compile Include="Model\Post.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -59,6 +63,7 @@
     <Compile Include="ViewModels\Fragments\NewPostViewModel.cs" />
     <Compile Include="ViewModels\Fragments\NotificationsViewModel.cs" />
     <Compile Include="ViewModels\Fragments\ProfileViewModel.cs" />
+    <Compile Include="ViewModels\PostViewModel.cs" />
     <Compile Include="ViewModels\RegistationViewModel.cs" />
     <Compile Include="ViewModels\Fragments\SearchViewModel.cs" />
     <Compile Include="ViewModels\WelcomeViewModel.cs" />

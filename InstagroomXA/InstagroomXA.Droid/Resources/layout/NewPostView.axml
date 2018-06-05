@@ -18,11 +18,15 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent=".50" />
     <EditText
-        android:id="@+id/descriptionEditText"
+        style="@style/EditText.BaseStyle"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="8dp"
-        android:ems="10"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="15dp"
         android:gravity="top"
         android:hint="@string/descriptionHintString"
         android:textColor="@color/primaryText"
@@ -31,7 +35,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:textColorHint="@color/secondaryText"
         app:MvxBind="Text NewPost.Description, Mode=TwoWay" />
     <Button
         android:id="@+id/takePhotoButton"
@@ -45,7 +48,7 @@
         android:text="@string/takePhotoButtonText"
         app:layout_constraintEnd_toStartOf="@+id/middleVerticalGuideline"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/middleHorizontalGuideline" />
+        app:layout_constraintTop_toBottomOf="@+id/middleHorizontalGuideline" />
     <Button
         android:id="@+id/openGalleryButton"
         style="@style/Button.BaseBlueStyle"
@@ -58,7 +61,7 @@
         android:text="@string/openGalleryButtonText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/middleVerticalGuideline"
-        app:layout_constraintTop_toTopOf="@+id/middleHorizontalGuideline" />
+        app:layout_constraintTop_toBottomOf="@+id/middleHorizontalGuideline" />
     <Button
         android:id="@+id/postButton"
         style="@style/Button.BaseStyle"

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/View.MasterPageStyle">
+    <android.support.constraint.Guideline
+        android:id="@+id/middleHorizontalGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+    <android.support.constraint.Guideline
+        android:id="@+id/userInfoHorizontalGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="90dp" />
+    <Mvx.MvxImageView
+        android:id="@+id/userProfileImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/userInfoHorizontalGuideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:MvxBind="ImageUrl CurrentUser.ImagePath" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/userInfoHorizontalGuideline"
+        app:layout_constraintStart_toEndOf="@+id/userProfileImageView"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/usernameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/primaryText"
+            app:MvxBind="Text CurrentUser.Username" />
+        <TextView
+            android:id="@+id/dateTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jun 2, 2018 11:30 AM"
+            android:textSize="14sp"
+            android:textColor="@color/primaryText"
+            app:layout_constraintBottom_toTopOf="@+id/userInfoHorizontalGuideline"
+            app:MvxBind="Text CurrentPost.PostTime, Converter=DateTimeToString" />
+    </LinearLayout>
+    <Mvx.MvxImageView
+        android:id="@+id/postImageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/middleHorizontalGuideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/userInfoHorizontalGuideline"
+        app:MvxBind="ImageUrl CurrentPost.ImagePath" />
+    <LinearLayout
+        android:id="@+id/postControlLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/middleHorizontalGuideline">
+        <Button
+            android:id="@+id/likeImageButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:background="@mipmap/ic_thumb_up" />
+        <TextView
+            android:id="@+id/likesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:textColor="@color/primaryText"
+            app:MvxBind="Text CurrentPost.Likes" />
+        <TextView
+            android:id="@+id/commentsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:text="0 comments"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/primaryText"
+            app:MvxBind="Text CurrentPost.NumOfComments, Converter=NumOfCommentsToString" />
+    </LinearLayout>
+    <ScrollView
+        android:id="@+id/descriptionScrollView"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/postControlLinearLayout">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/descriptionTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/primaryText"
+                app:MvxBind="Text CurrentPost.Description" />
+        </LinearLayout>
+    </ScrollView>
+    <MvvmCross.Droid.Support.V7.RecyclerView.MvxRecyclerView
+        android:id="@+id/commentsRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/commentLinearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionScrollView"
+        app:MvxBind="ItemsSource CommentList" />
+    <LinearLayout
+        android:id="@+id/commentLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <EditText
+            android:id="@+id/commentEditText"
+            style="@style/EditText.BaseStyle"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Add a comment"
+            android:inputType="textMultiLine" />
+        <Button
+            android:id="@+id/commentImageButton"
+            android:layout_width="56dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_vertical|end"
+            android:layout_weight="1"
+            android:layout_marginLeft="8dp"
+            android:background="@mipmap/ic_action_send" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

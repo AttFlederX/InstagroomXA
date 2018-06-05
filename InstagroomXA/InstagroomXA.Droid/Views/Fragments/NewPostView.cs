@@ -11,6 +11,7 @@ using Android.Runtime;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
+using Android.Database;
 
 using InstagroomXA.Core.Helpers;
 using InstagroomXA.Core.ViewModels;
@@ -18,9 +19,10 @@ using InstagroomXA.Droid.Helpers;
 using InstagroomXA.Droid.Extensions;
 
 using Java.IO;
+
 using MvvmCross.Droid.Shared.Attributes;
 using MvvmCross.Droid.Support.V4;
-using Android.Database;
+using MvvmCross.Binding.Droid.BindingContext;
 
 namespace InstagroomXA.Droid.Views
 {
@@ -44,7 +46,8 @@ namespace InstagroomXA.Droid.Views
         {
             // Use this to return your custom view for this Fragment
             // return inflater.Inflate(Resource.Layout.YourFragment, container, false);
-            var view = inflater.Inflate(Resource.Layout.NewPostView, container, false);
+            base.OnCreateView(inflater, container, savedInstanceState);
+            var view = this.BindingInflate(Resource.Layout.NewPostView, null);
 
             SetImageDirectory();
 
