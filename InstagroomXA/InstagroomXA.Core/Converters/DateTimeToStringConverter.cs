@@ -12,7 +12,7 @@ namespace InstagroomXA.Core.Converters
     {
         protected override string Convert(DateTime value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
-            return $"{value.DayOfWeek}, {value.ToString("MMM dd, yyyy HH:MM tt")}";
+            return $"{value.DayOfWeek}, {value.ToString("MMM dd, yyyy hh:mm tt")}";
         }
     }
 }

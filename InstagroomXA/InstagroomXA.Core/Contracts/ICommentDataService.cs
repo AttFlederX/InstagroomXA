@@ -14,7 +14,7 @@ namespace InstagroomXA.Core.Contracts
     public interface ICommentDataService
     {
         Task<Comment> GetCommentByIDAsync(int commentId);
-        Task<IEnumerable<Comment>> GetPostComments(int postId, int n);
+        Task<IEnumerable<Comment>> GetPostComments(int postId, int n = 0);
 
         Task<bool> AddCommentAsync(Comment newComment);
     }

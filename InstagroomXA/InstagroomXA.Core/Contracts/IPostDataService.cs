@@ -14,7 +14,7 @@ namespace InstagroomXA.Core.Contracts
     public interface IPostDataService
     {
         Task<Post> GetPostByIDAsync(int postId);
-        Task<IEnumerable<Post>> GetUserPosts(int userId, int n);
+        Task<IEnumerable<Post>> GetUserPosts(int userId, int n = 0);
 
         Task<bool> AddPostAsync(Post newPost);
         Task<bool> UpdatePostAsync(Post updPost);

@@ -42,5 +42,8 @@
   <string name="takePhotoButtonText">Take a photo</string>
   <string name="openGalleryButtonText">Open gallery</string>
   <string name="postButtonText">Post</string>
+
+  <!--Post page strings-->
+  <string name="commentHintString">Add a comment</string>
   
 </resources>

@@ -14,7 +14,7 @@ namespace InstagroomXA.Core.Contracts
     public interface INotificationDataService
     {
         Task<Notification> GetNotificationByIDAsync(int notificationId);
-        Task<IEnumerable<Notification>> GetUserNotifications(int userId, int n);
+        Task<IEnumerable<Notification>> GetUserNotifications(int userId, int n = 0);
 
         Task<bool> AddNotificationAsync(Notification newNotification);
     }
