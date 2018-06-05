@@ -27,7 +27,7 @@ namespace InstagroomXA.Core.Services
         }
 
         /// <summary>
-        /// Returns the post profile with the specified ID (ID property is a primary key)
+        /// Returns the post with the specified ID (ID property is a primary key)
         /// </summary>
         /// <param name="userId"></param>
         /// <returns></returns>

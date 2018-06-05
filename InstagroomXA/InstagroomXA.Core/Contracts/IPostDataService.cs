@@ -8,6 +8,9 @@ using InstagroomXA.Core.Model;
 
 namespace InstagroomXA.Core.Contracts
 {
+    /// <summary>
+    /// Interface for post data services' classes
+    /// </summary>
     public interface IPostDataService
     {
         Task<Post> GetPostByIDAsync(int postId);
