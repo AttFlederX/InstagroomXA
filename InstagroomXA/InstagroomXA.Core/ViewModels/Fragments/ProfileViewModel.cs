@@ -18,6 +18,7 @@ namespace InstagroomXA.Core.ViewModels
     /// </summary>
     public class ProfileViewModel : BaseViewModel
     {
+        private readonly IEnumService _enumService;
         private readonly IUserDataService _userDataService;
         private readonly IPostDataService _postDataService;
 
@@ -86,9 +87,10 @@ namespace InstagroomXA.Core.ViewModels
         }
         #endregion
 
-        public ProfileViewModel(IMvxMessenger messenger, IUserDataService userDataService, 
+        public ProfileViewModel(IMvxMessenger messenger, IEnumService enumService, IUserDataService userDataService, 
             IPostDataService postDataService) : base(messenger)
         {
+            _enumService = enumService;
             _userDataService = userDataService;
             _postDataService = postDataService;
 
@@ -110,7 +112,7 @@ namespace InstagroomXA.Core.ViewModels
         {
             PostList = new MvxObservableCollection<Post>((await _postDataService.GetUserPosts(_userDataService.CurrentUser.ID, 
                 ConstantHelper.InitialPostsNum)).Reverse());
-            IsPostListEmpty = (CurrentUser.NumOfPosts == 0) ? 0 : 8; // int values taken from ViewStates enum
+            IsPostListEmpty = (CurrentUser.NumOfPosts == 0) ? _enumService.ViewStateVisible : _enumService.ViewStateGone;
         }
     }
 }

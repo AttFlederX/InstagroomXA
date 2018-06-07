@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/middleHorizontalGuideline"
-            local:layout_constraintGuide_percent=".45"
+            local:layout_constraintGuide_percent=".50"
             android:orientation="horizontal" />
     <!--to be replaced w/ profile image-->
         <View
@@ -94,7 +94,7 @@
                         android:gravity="center"
                         android:text="0"
                         android:textStyle="bold"
-                        local:MvxBind="Text CurrentUser.Followers, Converter=FollowersToString" />
+                        local:MvxBind="Text CurrentUser.NumOfFollowers" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="wrap_content"

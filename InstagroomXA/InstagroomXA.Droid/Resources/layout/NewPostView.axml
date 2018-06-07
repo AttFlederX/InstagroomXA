@@ -35,7 +35,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:MvxBind="Text NewPost.Description, Mode=TwoWay" />
+        app:MvxBind="Text NewPost.Description, Mode=TwoWay"
+        android:paddingTop="8dp" />
     <Button
         android:id="@+id/takePhotoButton"
         style="@style/Button.BaseBlueStyle"

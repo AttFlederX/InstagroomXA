@@ -256,6 +256,7 @@
     <AndroidResource Include="Resources\layout\SearchView.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\font\roboto_thin.ttf" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bootstrap\DownloadCachePluginBootstrap.cs" />
@@ -268,9 +269,11 @@
     <Compile Include="LinkerPleaseInclude.cs" />
     <Compile Include="Services\DBConnectionService.cs" />
     <Compile Include="Services\DialogService.cs" />
+    <Compile Include="Services\EnumService.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="SplashScreen.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TextStyleCustomBinding.cs" />
     <Compile Include="Views\BaseView.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Views\Fragments\FeedView.cs" />
@@ -440,6 +443,9 @@
     <AndroidResource Include="Resources\layout\comment_listitem.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\font\edittext_roboto_thin.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Android.Support.Annotations.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Annotations.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Annotations.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Annotations.targets')" />

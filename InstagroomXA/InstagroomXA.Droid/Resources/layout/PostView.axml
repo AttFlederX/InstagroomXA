@@ -88,7 +88,8 @@
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:layout_weight="1"
-            android:background="@mipmap/ic_thumb_up" />
+            android:background="@mipmap/ic_thumb_up"
+            app:MvxBind="Click LikeCommand" />
         <TextView
             android:id="@+id/likesTextView"
             android:layout_width="wrap_content"
@@ -98,7 +99,7 @@
             android:layout_weight="1"
             android:textSize="16sp"
             android:textColor="@color/primaryText"
-            app:MvxBind="Text CurrentPost.Likes" />
+            app:MvxBind="Text CurrentPost.Likes; TextStyle IsPostLikedByUser" />
         <TextView
             android:id="@+id/commentsTextView"
             android:layout_width="wrap_content"
@@ -151,6 +152,16 @@
         app:layout_constraintTop_toBottomOf="@+id/descriptionScrollView"
         app:MvxItemTemplate="@layout/comment_listitem"
         app:MvxBind="ItemsSource CommentList; ItemClick CommentSelectedCommand" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/commentLinearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionScrollView"
+        android:text="@string/noCommentsText"
+        android:textColor="@color/secondaryText"
+        app:MvxBind="Visibility IsCommentListEmpty" />
     <LinearLayout
         android:id="@+id/commentLinearLayout"
         android:layout_width="match_parent"
@@ -168,7 +179,7 @@
             android:id="@+id/commentEditText"
             style="@style/EditText.BaseStyle"
             android:layout_width="match_parent"
-            android:layout_height="45dp"
+            android:layout_height="39dp"
             android:layout_weight="1"
             android:ems="10"
             android:hint="@string/commentHintString"

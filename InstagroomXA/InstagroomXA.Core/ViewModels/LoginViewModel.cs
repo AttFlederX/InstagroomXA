@@ -62,7 +62,7 @@ namespace InstagroomXA.Core.ViewModels
             {
                 if (string.IsNullOrWhiteSpace(Username))
                 {
-                    await _dialogService.ShowAlertAsync("Please enter your username", "Error", "OK");
+                    _dialogService.ShowPopupMessage("Please enter your username");
                     return;
                 }
 

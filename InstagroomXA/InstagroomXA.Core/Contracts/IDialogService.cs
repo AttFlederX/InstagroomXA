@@ -12,5 +12,6 @@ namespace InstagroomXA.Core.Contracts
     public interface IDialogService
     {
         Task ShowAlertAsync(string message, string title, string buttonText, Action okCallback = null);
+        void ShowPopupMessage(string message);
     }
 }

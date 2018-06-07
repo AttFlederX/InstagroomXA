@@ -17,6 +17,7 @@ using InstagroomXA.Core.Helpers;
 using InstagroomXA.Core.ViewModels;
 using InstagroomXA.Droid.Helpers;
 using InstagroomXA.Droid.Extensions;
+using InstagroomXA.Droid.Services;
 
 using Java.IO;
 
@@ -72,21 +73,28 @@ namespace InstagroomXA.Droid.Views
         {
             base.OnActivityResult(requestCode, resultCode, data);
 
-            if (requestCode == (int)ConstantHelper.AndroidCameraRequestCodes.Camera)
+            try
             {
-                if (resultCode == (int)Result.Ok)
+                if (requestCode == (int)ConstantHelper.AndroidCameraRequestCodes.Camera)
                 {
-                    SetImage();
+                    if (resultCode == (int)Result.Ok)
+                    {
+                        SetImage();
+                    }
+                    CameraDataHelper.CurrentImage = null;
                 }
-                CameraDataHelper.CurrentImage = null;
+                else if (requestCode == (int)ConstantHelper.AndroidCameraRequestCodes.Gallery)
+                {
+                    if (resultCode == (int)Result.Ok)
+                    {
+                        CameraDataHelper.CurrentImage = new File(data.Data.GetRealPath(this.Context));
+                        SetImage();
+                    }
+                }
             }
-            else if (requestCode == (int)ConstantHelper.AndroidCameraRequestCodes.Gallery)
+            catch (Exception ex)
             {
-                if (resultCode == (int)Result.Ok)
-                {
-                    CameraDataHelper.CurrentImage = new File(data.Data.GetRealPath(this.Context));
-                    SetImage();
-                }
+                (new DialogService()).ShowPopupMessage($"Failed to upload the image\n{ex.Message}");
             }
         }
 

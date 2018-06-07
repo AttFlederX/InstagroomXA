@@ -39,6 +39,7 @@
     <Compile Include="Contracts\ICommentDataService.cs" />
     <Compile Include="Contracts\IDBConnectionService.cs" />
     <Compile Include="Contracts\IDialogService.cs" />
+    <Compile Include="Contracts\IEnumService.cs" />
     <Compile Include="Contracts\INotificationDataService.cs" />
     <Compile Include="Contracts\IPostDataService.cs" />
     <Compile Include="Contracts\IUserDataService.cs" />

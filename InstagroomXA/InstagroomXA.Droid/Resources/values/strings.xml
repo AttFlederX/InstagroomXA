@@ -45,5 +45,6 @@
 
   <!--Post page strings-->
   <string name="commentHintString">Add a comment</string>
+  <string name="noCommentsText">There are no comments for this post</string>
   
 </resources>

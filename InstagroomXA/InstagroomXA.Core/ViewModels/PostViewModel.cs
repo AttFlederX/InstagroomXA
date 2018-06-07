@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using InstagroomXA.Core.Contracts;
+using InstagroomXA.Core.Helpers;
 using InstagroomXA.Core.Model;
 
 using MvvmCross.Core.ViewModels;
@@ -17,6 +18,7 @@ namespace InstagroomXA.Core.ViewModels
     /// </summary>
     public class PostViewModel : BaseViewModel
     {
+        private readonly IEnumService _enumService;
         private readonly IDialogService _dialogService;
         private readonly IUserDataService _userDataService;
         private readonly IPostDataService _postDataService;
@@ -30,6 +32,7 @@ namespace InstagroomXA.Core.ViewModels
         private Post _currentPost;
         private int _isCommentListEmpty;
         private string _commentText;
+        private int _isPostLikedByUser;
 
         #region Bindable properties
         public User CurrentUser
@@ -81,6 +84,17 @@ namespace InstagroomXA.Core.ViewModels
                 RaisePropertyChanged(() => CommentText);
             }
         }
+
+        public int IsPostLikedByUser // for # of likes textview 
+        {
+            get => _isPostLikedByUser;
+            set
+            {
+                _isPostLikedByUser = value;
+                RaisePropertyChanged(() => IsPostLikedByUser);
+            }
+        }
+
         #endregion
 
         #region Commands 
@@ -88,7 +102,30 @@ namespace InstagroomXA.Core.ViewModels
         {
             get => new MvxCommand(async () =>
             {
-                ShowViewModel<LoginViewModel>();
+                if (!CurrentUser.LikedPosts.Contains(CurrentPost.ID))
+                {
+                    CurrentUser.LikedPosts.Add(CurrentPost.ID);
+                    await _userDataService.UpdateUserAsync(CurrentUser);
+
+                    CurrentPost.Likes++;
+                    RaisePropertyChanged(() => CurrentPost); // update the likes count
+                    await _postDataService.UpdatePostAsync(CurrentPost);
+
+                    IsPostLikedByUser = _enumService.TypefaceStyleBold;
+                    _dialogService.ShowPopupMessage("You've liked this post");
+                }
+                else
+                {
+                    CurrentUser.LikedPosts.Remove(CurrentPost.ID);
+                    await _userDataService.UpdateUserAsync(CurrentUser);
+
+                    CurrentPost.Likes--;
+                    RaisePropertyChanged(() => CurrentPost); // update the likes count
+                    await _postDataService.UpdatePostAsync(CurrentPost);
+
+                    IsPostLikedByUser = _enumService.TypefaceStyleNormal;
+                    _dialogService.ShowPopupMessage("You've unliked this post");
+                }
             });
         }
 
@@ -117,9 +154,11 @@ namespace InstagroomXA.Core.ViewModels
 
                     await _commentDataService.AddCommentAsync(newComment);
                     CommentList.Add(newComment);
+                    IsCommentListEmpty = _enumService.ViewStateGone;
 
                     CurrentPost.NumOfComments++;
                     await _postDataService.UpdatePostAsync(CurrentPost);
+                    RaisePropertyChanged(() => CurrentPost); // update the comments count
 
                     CommentText = string.Empty;
                 }
@@ -128,9 +167,10 @@ namespace InstagroomXA.Core.ViewModels
         }
         #endregion
 
-        public PostViewModel(IMvxMessenger messenger, IDialogService dialogService, IUserDataService userDataService,
-            IPostDataService postDataService, ICommentDataService commentDataService) : base(messenger)
+        public PostViewModel(IMvxMessenger messenger, IEnumService enumService, IDialogService dialogService, 
+            IUserDataService userDataService, IPostDataService postDataService, ICommentDataService commentDataService) : base(messenger)
         {
+            _enumService = enumService;
             _dialogService = dialogService;
             _userDataService = userDataService;
             _postDataService = postDataService;
@@ -161,8 +201,11 @@ namespace InstagroomXA.Core.ViewModels
             CurrentUser = (_userId == -1) ? _userDataService.CurrentUser : await _userDataService.GetUserByIDAsync(_userId);
             CurrentPost = await _postDataService.GetPostByIDAsync(_postId);
             CommentList = new MvxObservableCollection<Comment>((await _commentDataService.GetPostComments(CurrentPost.ID)));
-            IsCommentListEmpty = (CurrentPost.NumOfComments == 0) ? 0 : 8; // int values taken from ViewStates enum
+            IsCommentListEmpty = (CurrentPost.NumOfComments == 0) ? _enumService.ViewStateVisible : 
+                _enumService.ViewStateGone;
             CommentText = string.Empty;
+            IsPostLikedByUser = (CurrentUser.LikedPosts.Contains(CurrentPost.ID)) ? _enumService.TypefaceStyleBold :
+                _enumService.TypefaceStyleNormal; // # of likes is in bold if the user liked the post
         }
     }
 }

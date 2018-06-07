@@ -90,9 +90,9 @@ namespace InstagroomXA.Core.ViewModels
                     };
                     
 
-                    await _dialogService.ShowAlertAsync("Your post has been published successfully", "New post", "OK");
+                    _dialogService.ShowPopupMessage("Your post has been published successfully");
                 }
-                else { await _dialogService.ShowAlertAsync("Please add an image", "Error", "OK"); }
+                else { _dialogService.ShowPopupMessage("Please add an image"); }
             });
         }
         #endregion
@@ -109,6 +109,22 @@ namespace InstagroomXA.Core.ViewModels
                 ImagePath = string.Empty,
                 Description = string.Empty
             };
+        }
+
+
+        public class SavedState
+        {
+            public Post NewPost { get; set; }
+        }
+
+        public SavedState SaveState()
+        {
+            return new SavedState { NewPost = this.NewPost };
+        }
+
+        public void ReloadState(SavedState savedState)
+        {
+            NewPost = savedState.NewPost;
         }
     }
 }

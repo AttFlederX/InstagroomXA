@@ -97,7 +97,7 @@ namespace InstagroomXA.Core.ViewModels
             {
                 if (string.IsNullOrWhiteSpace(Username))
                 {
-                    await _dialogService.ShowAlertAsync("Please enter your username", "Error", "OK");
+                    _dialogService.ShowPopupMessage("Please enter your username");
                     return;
                 }
                 // query user by username (which should be unique)
@@ -112,22 +112,21 @@ namespace InstagroomXA.Core.ViewModels
 
                 if (string.IsNullOrWhiteSpace(FirstName))
                 {
-                    await _dialogService.ShowAlertAsync("Please enter your first name", "Error", "OK");
+                    _dialogService.ShowPopupMessage("Please enter your first name");
                     return;
                 }
                 else if(string.IsNullOrWhiteSpace(LastName))
                 {
-                    await _dialogService.ShowAlertAsync("Please enter your last name", "Error", "OK");
+                    _dialogService.ShowPopupMessage("Please enter your last name");
                     return;
                 }
                 else if(!_validationService.IsEmailValid(Email))
                 {
-                    await _dialogService.ShowAlertAsync("Please enter a valid email address", "Error", "OK");
+                    _dialogService.ShowPopupMessage("Please enter a valid email address");
                 }
                 else if (!_validationService.IsPasswordValid(Password))
                 {
-                    await _dialogService.ShowAlertAsync($"Please enter a valid password ({_validationService.PasswordCriteria})", "Error",
-                        "OK");
+                    _dialogService.ShowPopupMessage($"Please enter a valid password ({_validationService.PasswordCriteria})");
                     Password = string.Empty;
                     RepeatPassword = string.Empty;
                 }
@@ -146,16 +145,18 @@ namespace InstagroomXA.Core.ViewModels
                         LastName = this.LastName,
                         Email = this.Email,
                         Password = this.Password,
-                        Followers = new List<int>(),
                         Following = new List<int>(),
+                        LikedPosts = new List<int>(),
+                        NumOfFollowers = 0,
                         NumOfPosts = 0,
-                        FollowersString = string.Empty,
-                        FollowingString = string.Empty
+                        FollowingString = string.Empty,
+                        LikedPostsString = string.Empty
                     };
 
                     await _userDataService.AddUserAsync(newUserProfile);
                     // close the page after the user presses OK
-                    await _dialogService.ShowAlertAsync("Your account has been registered", "Success", "OK", () => Close(this));
+                    _dialogService.ShowPopupMessage("Your account has been registered");
+                    Close(this);
                 }
             });
         }

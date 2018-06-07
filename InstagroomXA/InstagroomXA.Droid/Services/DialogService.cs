@@ -34,6 +34,13 @@ namespace InstagroomXA.Droid.Services
             });
         }
 
+        public void ShowPopupMessage(string message)
+        {
+            var toast = Toast.MakeText(Application.Context, message, ToastLength.Long);
+            toast.Show();
+        }
+
+
         private void Alert(string message, string title, string okButton, Action okCallback = null)
         {
             Application.SynchronizationContext.Post(ignored =>

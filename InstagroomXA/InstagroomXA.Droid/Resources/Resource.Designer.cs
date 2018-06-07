@@ -4109,10 +4109,16 @@ namespace InstagroomXA.Droid
 		{
 			
 			// aapt resource value: 0x7f040000
-			public const int Logo = 2130968576;
+			public const int edittext_roboto_thin = 2130968576;
 			
 			// aapt resource value: 0x7f040001
-			public const int logoFont = 2130968577;
+			public const int Logo = 2130968577;
+			
+			// aapt resource value: 0x7f040002
+			public const int logoFont = 2130968578;
+			
+			// aapt resource value: 0x7f040003
+			public const int roboto_thin = 2130968579;
 			
 			static Font()
 			{
@@ -5312,6 +5318,9 @@ namespace InstagroomXA.Droid
 			
 			// aapt resource value: 0x7f0b0037
 			public const int newPostString = 2131427383;
+			
+			// aapt resource value: 0x7f0b0046
+			public const int noCommentsText = 2131427398;
 			
 			// aapt resource value: 0x7f0b003f
 			public const int noPostsText = 2131427391;

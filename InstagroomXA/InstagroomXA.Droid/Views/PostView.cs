@@ -25,6 +25,7 @@ namespace InstagroomXA.Droid.Views
 
             // Create your application here
             SetContentView(Resource.Layout.PostView);
+            
         }
     }
 }
