@@ -47,4 +47,12 @@
   <string name="commentHintString">Add a comment</string>
   <string name="noCommentsText">There are no comments for this post</string>
   
+  <!--User profile page strings-->
+  <string name="followButtonText">Follow</string>
+  <string name="followedButtonText">Followed</string>
+  <string name="userNoPostsText">This user hasn\'t posted anything yet</string>
+  
+  <!--Search page strings-->
+  <string name="searchPeopleString">Search people...</string>
+  
 </resources>

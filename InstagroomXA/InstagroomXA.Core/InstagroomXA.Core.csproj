@@ -45,12 +45,14 @@
     <Compile Include="Contracts\IUserDataService.cs" />
     <Compile Include="Contracts\IValidationService.cs" />
     <Compile Include="Converters\DateTimeToStringConverter.cs" />
+    <Compile Include="Converters\FollowersToLongStringConverter.cs" />
     <Compile Include="Converters\FollowersToStringConverter.cs" />
     <Compile Include="Converters\FollowingToStringConverter.cs" />
     <Compile Include="Converters\NumOfCommentsToStringConverter.cs" />
     <Compile Include="Converters\NumOfPostsToStringConverter.cs" />
     <Compile Include="Converters\UsernameToHandleConverter.cs" />
     <Compile Include="Helpers\ConstantHelper.cs" />
+    <Compile Include="Messages\CurrentUserUpdatedMessage.cs" />
     <Compile Include="Model\Comment.cs" />
     <Compile Include="Model\Notification.cs" />
     <Compile Include="Model\Post.cs" />
@@ -70,7 +72,8 @@
     <Compile Include="ViewModels\Fragments\ProfileViewModel.cs" />
     <Compile Include="ViewModels\PostViewModel.cs" />
     <Compile Include="ViewModels\RegistationViewModel.cs" />
-    <Compile Include="ViewModels\Fragments\SearchViewModel.cs" />
+    <Compile Include="ViewModels\Fragments\SearchPeopleViewModel.cs" />
+    <Compile Include="ViewModels\UserProfileViewModel.cs" />
     <Compile Include="ViewModels\WelcomeViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

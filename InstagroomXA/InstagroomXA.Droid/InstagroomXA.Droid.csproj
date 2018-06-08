@@ -253,7 +253,7 @@
     <AndroidResource Include="Resources\layout\ProfileView.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\SearchView.axml">
+    <AndroidResource Include="Resources\layout\SearchPeopleView.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\font\roboto_thin.ttf" />
@@ -284,7 +284,8 @@
     <Compile Include="Views\Fragments\ProfileView.cs" />
     <Compile Include="Views\PostView.cs" />
     <Compile Include="Views\RegistrationView.cs" />
-    <Compile Include="Views\Fragments\SearchView.cs" />
+    <Compile Include="Views\Fragments\SearchPeopleView.cs" />
+    <Compile Include="Views\UserProfileView.cs" />
     <Compile Include="Views\WelcomeView.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -446,6 +447,16 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\font\edittext_roboto_thin.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\search_listitem.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\UserProfileView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Android.Support.Annotations.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Annotations.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Annotations.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Annotations.targets')" />

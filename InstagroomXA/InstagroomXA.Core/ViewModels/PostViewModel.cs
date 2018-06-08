@@ -131,9 +131,12 @@ namespace InstagroomXA.Core.ViewModels
 
         public IMvxCommand CommentSelectedCommand
         {
-            get => new MvxCommand(async () =>
+            get => new MvxCommand<Comment>(async selectedComment =>
             {
-                ShowViewModel<LoginViewModel>();
+                if (selectedComment.CommenterID != CurrentUser.ID)
+                {
+                    ShowViewModel<UserProfileViewModel>(new { userId = selectedComment.CommenterID });
+                }
             });
         }
 
@@ -153,7 +156,7 @@ namespace InstagroomXA.Core.ViewModels
                     };
 
                     await _commentDataService.AddCommentAsync(newComment);
-                    CommentList.Add(newComment);
+                    CommentList.Insert(0, newComment);
                     IsCommentListEmpty = _enumService.ViewStateGone;
 
                     CurrentPost.NumOfComments++;
@@ -200,7 +203,7 @@ namespace InstagroomXA.Core.ViewModels
         {
             CurrentUser = (_userId == -1) ? _userDataService.CurrentUser : await _userDataService.GetUserByIDAsync(_userId);
             CurrentPost = await _postDataService.GetPostByIDAsync(_postId);
-            CommentList = new MvxObservableCollection<Comment>((await _commentDataService.GetPostComments(CurrentPost.ID)));
+            CommentList = new MvxObservableCollection<Comment>((await _commentDataService.GetPostComments(CurrentPost.ID)).Reverse());
             IsCommentListEmpty = (CurrentPost.NumOfComments == 0) ? _enumService.ViewStateVisible : 
                 _enumService.ViewStateGone;
             CommentText = string.Empty;

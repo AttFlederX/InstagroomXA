@@ -7,11 +7,13 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
+using Android.Support.V7.Widget;
 using Android.Views;
 using Android.Widget;
 
 using InstagroomXA.Core.ViewModels;
 
+using MvvmCross.Droid.Support.V7.RecyclerView;
 using MvvmCross.Droid.Views;
 
 namespace InstagroomXA.Droid.Views
@@ -25,7 +27,14 @@ namespace InstagroomXA.Droid.Views
 
             // Create your application here
             SetContentView(Resource.Layout.PostView);
-            
+
+            var postsRecyclerView = FindViewById<MvxRecyclerView>(Resource.Id.commentsRecyclerView);
+            if (postsRecyclerView != null)
+            {
+                postsRecyclerView.HasFixedSize = true;
+                var layoutManager = new LinearLayoutManager(this);
+                postsRecyclerView.SetLayoutManager(layoutManager);
+            }
         }
     }
 }

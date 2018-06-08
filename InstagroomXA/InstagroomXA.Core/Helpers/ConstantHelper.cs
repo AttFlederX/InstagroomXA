@@ -13,6 +13,7 @@ namespace InstagroomXA.Core.Helpers
     {
         public static string ImageDirectoryName { get => "instxa"; }
         public static int InitialPostsNum { get => 20; }
+        public static int MinQueryLength { get => 3; }
 
         public enum AndroidCameraRequestCodes { Camera, Gallery }
         public static int AndroidProfilePostsRecyclerViewColumnNum { get => 3; }

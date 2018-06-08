@@ -4400,6 +4400,9 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0a0056
 			public const int @fixed = 2131361878;
 			
+			// aapt resource value: 0x7f0a00e9
+			public const int followButton = 2131362025;
+			
 			// aapt resource value: 0x7f0a0067
 			public const int forever = 2131361895;
 			
@@ -4478,8 +4481,8 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0a00ad
 			public const int logoTextView = 2131361965;
 			
-			// aapt resource value: 0x7f0a00e5
-			public const int masked = 2131362021;
+			// aapt resource value: 0x7f0a00ec
+			public const int masked = 2131362028;
 			
 			// aapt resource value: 0x7f0a00b6
 			public const int masterBottomNavigationView = 2131361974;
@@ -4493,26 +4496,26 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0a00c3
 			public const int media_actions = 2131361987;
 			
-			// aapt resource value: 0x7f0a00e6
-			public const int menu_feed = 2131362022;
+			// aapt resource value: 0x7f0a00ed
+			public const int menu_feed = 2131362029;
+			
+			// aapt resource value: 0x7f0a00ef
+			public const int menu_newPost = 2131362031;
+			
+			// aapt resource value: 0x7f0a00f0
+			public const int menu_notifs = 2131362032;
+			
+			// aapt resource value: 0x7f0a00f1
+			public const int menu_profile = 2131362033;
+			
+			// aapt resource value: 0x7f0a00ee
+			public const int menu_search = 2131362030;
+			
+			// aapt resource value: 0x7f0a00f2
+			public const int menu_signOut = 2131362034;
 			
 			// aapt resource value: 0x7f0a00e8
-			public const int menu_newPost = 2131362024;
-			
-			// aapt resource value: 0x7f0a00e9
-			public const int menu_notifs = 2131362025;
-			
-			// aapt resource value: 0x7f0a00ea
-			public const int menu_profile = 2131362026;
-			
-			// aapt resource value: 0x7f0a00e7
-			public const int menu_search = 2131362023;
-			
-			// aapt resource value: 0x7f0a00eb
-			public const int menu_signOut = 2131362027;
-			
-			// aapt resource value: 0x7f0a00e3
-			public const int message = 2131362019;
+			public const int message = 2131362024;
 			
 			// aapt resource value: 0x7f0a0033
 			public const int middle = 2131361843;
@@ -4549,6 +4552,12 @@ namespace InstagroomXA.Droid
 			
 			// aapt resource value: 0x7f0a00c5
 			public const int notification_main_column_container = 2131361989;
+			
+			// aapt resource value: 0x7f0a00e5
+			public const int numOfFollowersTextView = 2131362021;
+			
+			// aapt resource value: 0x7f0a00e4
+			public const int numOfPostsTextView = 2131362020;
 			
 			// aapt resource value: 0x7f0a00ba
 			public const int openGalleryButton = 2131361978;
@@ -4639,6 +4648,12 @@ namespace InstagroomXA.Droid
 			
 			// aapt resource value: 0x7f0a0057
 			public const int scrollable = 2131361879;
+			
+			// aapt resource value: 0x7f0a00e6
+			public const int searchEditText = 2131362022;
+			
+			// aapt resource value: 0x7f0a00e7
+			public const int searchResultRecyclerView = 2131362023;
 			
 			// aapt resource value: 0x7f0a008f
 			public const int search_badge = 2131361935;
@@ -4814,8 +4829,14 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0a0028
 			public const int useLogo = 2131361832;
 			
+			// aapt resource value: 0x7f0a00e3
+			public const int userImageView = 2131362019;
+			
 			// aapt resource value: 0x7f0a00d0
 			public const int userInfoHorizontalGuideline = 2131362000;
+			
+			// aapt resource value: 0x7f0a00ea
+			public const int userPostsRecyclerView = 2131362026;
 			
 			// aapt resource value: 0x7f0a00d1
 			public const int userProfileImageView = 2131362001;
@@ -4829,8 +4850,8 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0a0016
 			public const int view_offset_helper = 2131361814;
 			
-			// aapt resource value: 0x7f0a00e4
-			public const int visible = 2131362020;
+			// aapt resource value: 0x7f0a00eb
+			public const int visible = 2131362027;
 			
 			// aapt resource value: 0x7f0a003e
 			public const int withText = 2131361854;
@@ -5099,28 +5120,34 @@ namespace InstagroomXA.Droid
 			public const int RegistrationView = 2131034177;
 			
 			// aapt resource value: 0x7f050042
-			public const int SearchView = 2131034178;
+			public const int search_listitem = 2131034178;
 			
 			// aapt resource value: 0x7f050043
-			public const int select_dialog_item_material = 2131034179;
+			public const int SearchPeopleView = 2131034179;
 			
 			// aapt resource value: 0x7f050044
-			public const int select_dialog_multichoice_material = 2131034180;
+			public const int select_dialog_item_material = 2131034180;
 			
 			// aapt resource value: 0x7f050045
-			public const int select_dialog_singlechoice_material = 2131034181;
+			public const int select_dialog_multichoice_material = 2131034181;
 			
 			// aapt resource value: 0x7f050046
-			public const int SplashScreen = 2131034182;
+			public const int select_dialog_singlechoice_material = 2131034182;
 			
 			// aapt resource value: 0x7f050047
-			public const int support_simple_spinner_dropdown_item = 2131034183;
+			public const int SplashScreen = 2131034183;
 			
 			// aapt resource value: 0x7f050048
-			public const int tooltip = 2131034184;
+			public const int support_simple_spinner_dropdown_item = 2131034184;
 			
 			// aapt resource value: 0x7f050049
-			public const int WelcomeView = 2131034185;
+			public const int tooltip = 2131034185;
+			
+			// aapt resource value: 0x7f05004a
+			public const int UserProfileView = 2131034186;
+			
+			// aapt resource value: 0x7f05004b
+			public const int WelcomeView = 2131034187;
 			
 			static Layout()
 			{
@@ -5295,6 +5322,12 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0b002f
 			public const int firstNameString = 2131427375;
 			
+			// aapt resource value: 0x7f0b0047
+			public const int followButtonText = 2131427399;
+			
+			// aapt resource value: 0x7f0b0048
+			public const int followedButtonText = 2131427400;
+			
 			// aapt resource value: 0x7f0b003d
 			public const int followersText = 2131427389;
 			
@@ -5367,6 +5400,9 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0b0032
 			public const int repeatPasswordString = 2131427378;
 			
+			// aapt resource value: 0x7f0b004a
+			public const int searchPeopleString = 2131427402;
+			
 			// aapt resource value: 0x7f0b0036
 			public const int searchString = 2131427382;
 			
@@ -5378,6 +5414,9 @@ namespace InstagroomXA.Droid
 			
 			// aapt resource value: 0x7f0b0042
 			public const int takePhotoButtonText = 2131427394;
+			
+			// aapt resource value: 0x7f0b0049
+			public const int userNoPostsText = 2131427401;
 			
 			// aapt resource value: 0x7f0b003b
 			public const int usernameFallbackString = 2131427387;
