@@ -107,7 +107,7 @@ namespace InstagroomXA.Core.ViewModels
         }
 
         /// <summary>
-        /// Method for asynchronous post data fetch
+        /// Method for asynchronous post data fetching
         /// </summary>
         /// <returns></returns>
         protected override async Task InitializeAsync()

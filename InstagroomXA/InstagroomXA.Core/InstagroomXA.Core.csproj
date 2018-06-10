@@ -48,11 +48,13 @@
     <Compile Include="Converters\FollowersToLongStringConverter.cs" />
     <Compile Include="Converters\FollowersToStringConverter.cs" />
     <Compile Include="Converters\FollowingToStringConverter.cs" />
+    <Compile Include="Converters\LikesToStringConverter.cs" />
     <Compile Include="Converters\NumOfCommentsToStringConverter.cs" />
     <Compile Include="Converters\NumOfPostsToStringConverter.cs" />
     <Compile Include="Converters\UsernameToHandleConverter.cs" />
     <Compile Include="Helpers\ConstantHelper.cs" />
     <Compile Include="Messages\CurrentUserUpdatedMessage.cs" />
+    <Compile Include="Messages\PostUpdatedMessage.cs" />
     <Compile Include="Model\Comment.cs" />
     <Compile Include="Model\Notification.cs" />
     <Compile Include="Model\Post.cs" />

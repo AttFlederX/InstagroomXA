@@ -28,6 +28,8 @@ namespace InstagroomXA.Core.Model
         public string Password { get; set; }
         [MaxLength(255)]
         public string Email { get; set; }
+        [MaxLength(255)]
+        public string ImagePath { get; set; }
 
         [TextBlob("FollowingString")]
         public List<int> Following { get; set; }

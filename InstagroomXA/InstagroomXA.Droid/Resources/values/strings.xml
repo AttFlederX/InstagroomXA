@@ -55,4 +55,6 @@
   <!--Search page strings-->
   <string name="searchPeopleString">Search people...</string>
   
+  <!--Feed page strings-->
+  <string name="noFeedPostsString">Posts from people you\'re following will appear here\nUse the Search tab to find people to follow</string>
 </resources>

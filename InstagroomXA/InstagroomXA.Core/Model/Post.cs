@@ -17,6 +17,11 @@ namespace InstagroomXA.Core.Model
         [AutoIncrement, PrimaryKey]
         public int ID { get; set; }
 
+        [MaxLength(32)]
+        public string Username { get; set; }
+        [MaxLength(255)]
+        public string UserImagePath { get; set; }
+
         public int UserID { get; set; }
         public DateTime PostTime { get; set; }
 

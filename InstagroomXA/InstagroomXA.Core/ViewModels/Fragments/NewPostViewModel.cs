@@ -76,7 +76,10 @@ namespace InstagroomXA.Core.ViewModels
                         ImagePath = NewPost.ImagePath,
                         Likes = 0,
                         PostTime = DateTime.Now,
-                        UserID = _userDataService.CurrentUser.ID
+                        UserID = _userDataService.CurrentUser.ID,
+                        NumOfComments = 0,
+                        Username = _userDataService.CurrentUser.Username,
+                        UserImagePath = _userDataService.CurrentUser.ImagePath
                     };
 
                     await _postDataService.AddPostAsync(newPost);

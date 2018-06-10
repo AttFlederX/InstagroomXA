@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     style="@style/View.MasterPageStyle">
     <TextView
-        android:text="@string/feedString"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/noFeedPostsString"
+        android:textColor="@color/secondaryText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView1"
         android:gravity="center"
-        android:layout_gravity="center" />
+        android:layout_gravity="center"
+        local:MvxBind="Visibility IsPostListEmpty" />
+    <MvvmCross.Droid.Support.V7.RecyclerView.MvxRecyclerView
+        android:id="@+id/feedPostsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        local:MvxItemTemplate="@layout/feed_listitem"
+        local:MvxBind="ItemsSource PostList; ItemClick PostSelectedCommand; Visibility IsPostListNotEmpty" />
 </LinearLayout>

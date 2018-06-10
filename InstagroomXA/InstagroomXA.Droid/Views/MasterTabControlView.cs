@@ -86,6 +86,7 @@ namespace InstagroomXA.Droid.Views
                 case Resource.Id.menu_feed:
                     tag += "FeedView";
                     fragment = Android.Support.V4.App.Fragment.Instantiate(this, tag);
+                    ViewModel.FeedVM.Start();
                     ((MvxFragment)fragment).DataContext = ViewModel.FeedVM;
 
                     masterToolbar.Visibility = ViewStates.Gone;

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using InstagroomXA.Core.Contracts;
 using InstagroomXA.Core.Helpers;
+using InstagroomXA.Core.Messages;
 using InstagroomXA.Core.Model;
 
 using MvvmCross.Core.ViewModels;
@@ -126,6 +127,8 @@ namespace InstagroomXA.Core.ViewModels
                     IsPostLikedByUser = _enumService.TypefaceStyleNormal;
                     _dialogService.ShowPopupMessage("You've unliked this post");
                 }
+
+                Messenger.Publish(new PostUpdatedMessage(this) { PostID = CurrentPost.ID });
             });
         }
 
@@ -162,6 +165,7 @@ namespace InstagroomXA.Core.ViewModels
                     CurrentPost.NumOfComments++;
                     await _postDataService.UpdatePostAsync(CurrentPost);
                     RaisePropertyChanged(() => CurrentPost); // update the comments count
+                    Messenger.Publish(new PostUpdatedMessage(this) { PostID = CurrentPost.ID });
 
                     CommentText = string.Empty;
                 }
