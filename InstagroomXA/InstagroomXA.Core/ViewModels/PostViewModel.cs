@@ -24,6 +24,7 @@ namespace InstagroomXA.Core.ViewModels
         private readonly IUserDataService _userDataService;
         private readonly IPostDataService _postDataService;
         private readonly ICommentDataService _commentDataService;
+        private readonly INotificationDataService _notificationDataService;
 
         private int _postId;
         private int _userId;
@@ -114,6 +115,18 @@ namespace InstagroomXA.Core.ViewModels
 
                     IsPostLikedByUser = _enumService.TypefaceStyleBold;
                     _dialogService.ShowPopupMessage("You've liked this post");
+
+                    // send a notification to post's author
+                    var likeNotif = new Notification()
+                    {
+                        PostID = CurrentPost.ID,
+                        SourceUserID = CurrentUser.ID,
+                        TargetUserID = CurrentPost.UserID,
+                        Text = string.Format(ConstantHelper.LikeNotificationText, CurrentUser.Username),
+                        Time = DateTime.Now,
+                        SourceUserImagePath = CurrentUser.ImagePath
+                    };
+                    await _notificationDataService.AddNotificationAsync(likeNotif);
                 }
                 else
                 {
@@ -167,6 +180,18 @@ namespace InstagroomXA.Core.ViewModels
                     RaisePropertyChanged(() => CurrentPost); // update the comments count
                     Messenger.Publish(new PostUpdatedMessage(this) { PostID = CurrentPost.ID });
 
+                    // send a notification to post's author
+                    var commentNotif = new Notification()
+                    {
+                        PostID = CurrentPost.ID,
+                        SourceUserID = CurrentUser.ID,
+                        TargetUserID = CurrentPost.UserID,
+                        Text = string.Format(ConstantHelper.CommentNotificationText, CurrentUser.Username),
+                        Time = DateTime.Now,
+                        SourceUserImagePath = CurrentUser.ImagePath
+                    };
+                    await _notificationDataService.AddNotificationAsync(commentNotif);
+
                     CommentText = string.Empty;
                 }
                 else { await _dialogService.ShowAlertAsync("Please enter the comment's text", "Error", "OK"); }
@@ -175,13 +200,15 @@ namespace InstagroomXA.Core.ViewModels
         #endregion
 
         public PostViewModel(IMvxMessenger messenger, IEnumService enumService, IDialogService dialogService, 
-            IUserDataService userDataService, IPostDataService postDataService, ICommentDataService commentDataService) : base(messenger)
+            IUserDataService userDataService, IPostDataService postDataService, ICommentDataService commentDataService, 
+            INotificationDataService notificationDataService) : base(messenger)
         {
             _enumService = enumService;
             _dialogService = dialogService;
             _userDataService = userDataService;
             _postDataService = postDataService;
             _commentDataService = commentDataService;
+            _notificationDataService = notificationDataService;
 
             CurrentUser = _userDataService.CurrentUser;
         }

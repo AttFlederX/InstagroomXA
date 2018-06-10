@@ -27,7 +27,6 @@ namespace InstagroomXA.Core.ViewModels
         private User _currentUser;
         private MvxObservableCollection<Post> _postList;
         private int _isPostListEmpty;
-        private int _isPostListNotEmpty;
 
         #region Bindable properties
         public User CurrentUser
@@ -57,16 +56,6 @@ namespace InstagroomXA.Core.ViewModels
             {
                 _isPostListEmpty = value;
                 RaisePropertyChanged(() => IsPostListEmpty);
-            }
-        }
-
-        public int IsPostListNotEmpty // for textview visibility
-        {
-            get => _isPostListNotEmpty;
-            set
-            {
-                _isPostListNotEmpty = value;
-                RaisePropertyChanged(() => IsPostListNotEmpty);
             }
         }
         #endregion
@@ -113,7 +102,6 @@ namespace InstagroomXA.Core.ViewModels
             PostList = new MvxObservableCollection<Post>(pList.OrderByDescending(p => p.PostTime)); // sort by date
 
             IsPostListEmpty = (PostList.Count == 0) ? _enumService.ViewStateVisible : _enumService.ViewStateGone;
-            IsPostListNotEmpty = (PostList.Count == 0) ? _enumService.ViewStateGone : _enumService.ViewStateVisible;
         }
     }
 }

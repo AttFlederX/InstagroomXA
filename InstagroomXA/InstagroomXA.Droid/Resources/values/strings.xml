@@ -57,4 +57,7 @@
   
   <!--Feed page strings-->
   <string name="noFeedPostsString">Posts from people you\'re following will appear here\nUse the Search tab to find people to follow</string>
+  
+  <!--Notification page string-->
+  <string name="noNotificationsString">Your notifications will appear here</string>
 </resources>

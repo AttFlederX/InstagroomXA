@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:local="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -9,14 +9,22 @@
         android:text="@string/noFeedPostsString"
         android:textColor="@color/secondaryText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:gravity="center"
         android:layout_gravity="center"
+        local:layout_constraintTop_toTopOf="parent"
+        local:layout_constraintEnd_toEndOf="parent"
+        local:layout_constraintStart_toStartOf="parent"
+        local:layout_constraintBottom_toBottomOf="parent"
         local:MvxBind="Visibility IsPostListEmpty" />
     <MvvmCross.Droid.Support.V7.RecyclerView.MvxRecyclerView
         android:id="@+id/feedPostsRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        local:layout_constraintTop_toTopOf="parent"
+        local:layout_constraintEnd_toEndOf="parent"
+        local:layout_constraintStart_toStartOf="parent"
+        local:layout_constraintBottom_toBottomOf="parent"
         local:MvxItemTemplate="@layout/feed_listitem"
-        local:MvxBind="ItemsSource PostList; ItemClick PostSelectedCommand; Visibility IsPostListNotEmpty" />
-</LinearLayout>
+        local:MvxBind="ItemsSource PostList; ItemClick PostSelectedCommand" />
+</android.support.constraint.ConstraintLayout>

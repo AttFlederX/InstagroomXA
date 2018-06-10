@@ -108,6 +108,7 @@ namespace InstagroomXA.Droid.Views
                 case Resource.Id.menu_notifs:
                     tag += "NotificationsView";
                     fragment = Android.Support.V4.App.Fragment.Instantiate(this, tag);
+                    ViewModel.NotificationsVM.Start();
                     ((MvxFragment)fragment).DataContext = ViewModel.NotificationsVM;
 
                     masterToolbar.Visibility = ViewStates.Gone;

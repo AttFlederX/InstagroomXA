@@ -23,5 +23,7 @@ namespace InstagroomXA.Core.Model
 
         [MaxLength(255)]
         public string Text { get; set; }
+        [MaxLength(255)]
+        public string SourceUserImagePath { get; set; }
     }
 }
