@@ -2,11 +2,14 @@ using Android.Content;
 using Android.Widget;
 
 using InstagroomXA.Core.Contracts;
+using InstagroomXA.Droid.Presenters;
 using InstagroomXA.Droid.Services;
 
 using MvvmCross.Binding.Bindings.Target.Construction;
 using MvvmCross.Core.ViewModels;
+using MvvmCross.Core.Views;
 using MvvmCross.Droid.Support.V7.AppCompat;
+using MvvmCross.Droid.Views;
 using MvvmCross.Platform;
 using MvvmCross.Platform.Platform;
 
@@ -50,6 +53,17 @@ namespace InstagroomXA.Droid
             base.FillTargetFactories(registry);
 
             registry.RegisterFactory(new MvxCustomBindingFactory<TextView>("TextStyle", textView => new TextStyleCustomBinding(textView)));
+        }
+
+        /// <summary>
+        /// For custom view presenters
+        /// </summary>
+        /// <returns></returns>
+        protected override IMvxAndroidViewPresenter CreateViewPresenter()
+        {
+            var presenter = new ClearStackCustomPresenter();
+            Mvx.RegisterSingleton<IMvxViewPresenter>(presenter);
+            return presenter;
         }
     }
 }

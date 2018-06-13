@@ -42,13 +42,13 @@ namespace InstagroomXA.Droid.Views
             // ViewModel.ShowInitialViewModelsCommand.Execute();
         }
 
-        /// <summary>
-        /// Disable back navigation
-        /// </summary>
-        public override void OnBackPressed()
-        {
-            return;
-        }
+        ///// <summary>
+        ///// Disable back navigation
+        ///// </summary>
+        //public override void OnBackPressed()
+        //{
+        //    return;
+        //}
 
         /// <summary>
         /// Sets the bottom navigation tab control style
@@ -140,6 +140,21 @@ namespace InstagroomXA.Droid.Views
         {
             MenuInflater.Inflate(Resource.Drawable.profileInfoToolbarMenu, menu);
             return base.OnCreateOptionsMenu(menu);
+        }
+
+        /// <summary>
+        /// Menu item click handler
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns></returns>
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            if (item.ItemId == Resource.Id.menu_signout)
+            {
+                ViewModel.SignOutCommand.Execute();
+                return true;
+            }
+            else { return base.OnOptionsItemSelected(item); }
         }
     }
 }

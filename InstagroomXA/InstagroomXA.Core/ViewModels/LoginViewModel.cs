@@ -72,8 +72,9 @@ namespace InstagroomXA.Core.ViewModels
                     if (user.Password == Password)
                     {
                        _userDataService.CurrentUser = user;
-                        // transfer to the master tabbed page
-                        ShowViewModel<MasterTabControlViewModel>();
+                        // transfer to the master tabbed page & clear the navigation stack
+                        ShowViewModel<MasterTabControlViewModel>(presentationBundle: 
+                            new MvxBundle(new Dictionary<string, string> { { "ClearStack", "" } }));
                     }
                     else
                     {

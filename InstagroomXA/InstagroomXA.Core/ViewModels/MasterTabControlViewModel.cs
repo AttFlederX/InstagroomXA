@@ -19,6 +19,8 @@ namespace InstagroomXA.Core.ViewModels
     /// </summary>
     public class MasterTabControlViewModel : BaseViewModel
     {
+        private readonly IUserDataService _userDataService;
+
         private readonly Lazy<FeedViewModel> _feedViewModel;
         private readonly Lazy<SearchPeopleViewModel> _searchViewModel;
         private readonly Lazy<NewPostViewModel> _newPostViewModel;
@@ -31,9 +33,23 @@ namespace InstagroomXA.Core.ViewModels
         public NotificationsViewModel NotificationsVM { get => _notificationsViewModel.Value; }
         public ProfileViewModel ProfileVM { get => _profileViewModel.Value; }
 
-
-        public MasterTabControlViewModel(IMvxMessenger messenger) : base(messenger)
+        #region Commands
+        public IMvxCommand SignOutCommand
         {
+            get => new MvxCommand(async () =>
+            {
+                _userDataService.CurrentUser = null;
+
+                // clears the navigation stack
+                ShowViewModel<LoginViewModel>(presentationBundle: new MvxBundle(new Dictionary<string, string> { { "ClearStack", "" } }));
+            });
+        }
+        #endregion
+
+        public MasterTabControlViewModel(IMvxMessenger messenger, IUserDataService userDataService) : base(messenger)
+        {
+            _userDataService = userDataService;
+
             _feedViewModel = new Lazy<FeedViewModel>(Mvx.IocConstruct<FeedViewModel>);
             _searchViewModel = new Lazy<SearchPeopleViewModel>(Mvx.IocConstruct<SearchPeopleViewModel>);
             _newPostViewModel = new Lazy<NewPostViewModel>(Mvx.IocConstruct<NewPostViewModel>);

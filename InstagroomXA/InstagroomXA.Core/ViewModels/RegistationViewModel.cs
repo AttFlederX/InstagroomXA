@@ -9,6 +9,7 @@ using MvvmCross.Plugins.Messenger;
 
 using InstagroomXA.Core.Contracts;
 using InstagroomXA.Core.Model;
+using InstagroomXA.Core.Helpers;
 
 namespace InstagroomXA.Core.ViewModels
 {
@@ -141,7 +142,7 @@ namespace InstagroomXA.Core.ViewModels
                     var newUserProfile = new User()
                     {
                         Username = this.Username.ToLowerInvariant(),
-                        ImagePath = string.Empty,
+                        ImagePath = ConstantHelper.BlankProfilePicturePath,
                         FirstName = this.FirstName,
                         LastName = this.LastName,
                         Email = this.Email,
