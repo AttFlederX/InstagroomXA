@@ -18,8 +18,11 @@ namespace InstagroomXA.Core.Helpers
         public static string CommentNotificationText => "@{0} commented on your post";
         public static string FollowNotificationText => "@{0} followed you";
         public static string BlankProfilePicturePath => "res:blank_profile_picture";
+        public static string UserIDKey => "UserID";
 
         public enum AndroidCameraRequestCodes { Camera, Gallery }
         public static int AndroidProfilePostsRecyclerViewColumnNum { get => 3; }
+        public static string AndroidTabIdxBundleKey => "MasterTabIdx";
+        public static string AndroidProfileToolbarState => "ProfileToolbarState";
     }
 }

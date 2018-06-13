@@ -2,44 +2,71 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Support.Design;
+using Android.Preferences;
 
 using InstagroomXA.Core.ViewModels;
 using InstagroomXA.Droid.Views;
+using InstagroomXA.Core.Helpers;
 
 using MvvmCross.Droid.Views;
 using MvvmCross.Droid.ViewModels;
 using MvvmCross.Droid.Support.V7.AppCompat;
 using MvvmCross.Droid.Support.V4;
-using System.Threading.Tasks;
 
 namespace InstagroomXA.Droid.Views
 {
-    [Activity(Label = "Instagroom")]
+    [Activity(Label = "Instagroom", ScreenOrientation = ScreenOrientation.Portrait)]
     public class MasterTabControlView : MvxCachingFragmentActivity<MasterTabControlViewModel>
     {
-        Toolbar masterToolbar;
+        int _masterTabIdx;
+        bool _isUserSaved;
+        Toolbar _masterToolbar;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
+            if (!_isUserSaved)
+            {
+                ISharedPreferences prefs = PreferenceManager.GetDefaultSharedPreferences(this);
+                ISharedPreferencesEditor editor = prefs.Edit();
+                editor.PutInt(ConstantHelper.UserIDKey, ViewModel.CurrentUserID);
+
+                editor.Apply();
+            }
+
             // Create your application here
             SetContentView(Resource.Layout.MasterTabControlView);
-            masterToolbar = FindViewById<Toolbar>(Resource.Id.masterToolbar);
-            SetActionBar(masterToolbar);
+            _masterToolbar = FindViewById<Toolbar>(Resource.Id.masterToolbar);
+            SetActionBar(_masterToolbar);
 
             SetMenuStyle();
-            
-            LoadFragment(Resource.Id.menu_feed);
+
+            if (savedInstanceState != null) { RestoreState(savedInstanceState); }
+            else { _masterTabIdx = Resource.Id.menu_feed; }
+
+            LoadFragment(_masterTabIdx);
             // ViewModel.ShowInitialViewModelsCommand.Execute();
+        }
+
+        /// <summary>
+        /// Restores the activity state retrieved from a bundle
+        /// </summary>
+        /// <param name="savedInstanceState"></param>
+        private void RestoreState(Bundle savedInstanceState)
+        {
+            _masterTabIdx = savedInstanceState.GetInt(ConstantHelper.AndroidTabIdxBundleKey);
+            _masterToolbar.Visibility = (ViewStates)savedInstanceState.GetInt(ConstantHelper.AndroidProfileToolbarState);
         }
 
         ///// <summary>
@@ -80,6 +107,7 @@ namespace InstagroomXA.Droid.Views
         {
             string tag = "instagroomxa.droid.views.";
             Android.Support.V4.App.Fragment fragment = null;
+            _masterTabIdx = id;
 
             switch (id)
             {
@@ -89,21 +117,21 @@ namespace InstagroomXA.Droid.Views
                     ViewModel.FeedVM.Start();
                     ((MvxFragment)fragment).DataContext = ViewModel.FeedVM;
 
-                    masterToolbar.Visibility = ViewStates.Gone;
+                    _masterToolbar.Visibility = ViewStates.Gone;
                     break;
                 case Resource.Id.menu_search:
                     tag += "SearchView";
                     fragment = Android.Support.V4.App.Fragment.Instantiate(this, tag);
                     ((MvxFragment)fragment).DataContext = ViewModel.SearchVM;
 
-                    masterToolbar.Visibility = ViewStates.Gone;
+                    _masterToolbar.Visibility = ViewStates.Gone;
                     break;
                 case Resource.Id.menu_newPost:
                     tag += "NewPostView";
                     fragment = Android.Support.V4.App.Fragment.Instantiate(this, tag);
                     ((MvxFragment)fragment).DataContext = ViewModel.NewPostVM;
 
-                    masterToolbar.Visibility = ViewStates.Gone;
+                    _masterToolbar.Visibility = ViewStates.Gone;
                     break;
                 case Resource.Id.menu_notifs:
                     tag += "NotificationsView";
@@ -111,7 +139,7 @@ namespace InstagroomXA.Droid.Views
                     ViewModel.NotificationsVM.Start();
                     ((MvxFragment)fragment).DataContext = ViewModel.NotificationsVM;
 
-                    masterToolbar.Visibility = ViewStates.Gone;
+                    _masterToolbar.Visibility = ViewStates.Gone;
                     break;
                 case Resource.Id.menu_profile:
                     tag += "ProfileView";
@@ -119,7 +147,7 @@ namespace InstagroomXA.Droid.Views
                     ViewModel.ProfileVM.Start();
                     ((MvxFragment)fragment).DataContext = ViewModel.ProfileVM;
 
-                    masterToolbar.Visibility = ViewStates.Visible;
+                    _masterToolbar.Visibility = ViewStates.Visible;
                     ActionBar.Title = "Profile info";
                     break;
             }
@@ -151,10 +179,31 @@ namespace InstagroomXA.Droid.Views
         {
             if (item.ItemId == Resource.Id.menu_signout)
             {
+                // remove the saved user ID
+                ISharedPreferences prefs = PreferenceManager.GetDefaultSharedPreferences(this);
+                ISharedPreferencesEditor editor = prefs.Edit();
+                editor.PutInt(ConstantHelper.UserIDKey, -1);
+
+                editor.Apply();
+
                 ViewModel.SignOutCommand.Execute();
+
                 return true;
             }
             else { return base.OnOptionsItemSelected(item); }
+        }
+
+        /// <summary>
+        /// Saves the activity state into a bundle
+        /// </summary>
+        /// <param name="outState"></param>
+        /// <param name="outPersistentState"></param>
+        public override void OnSaveInstanceState(Bundle outState, PersistableBundle outPersistentState)
+        {
+            outState.PutInt(ConstantHelper.AndroidTabIdxBundleKey, _masterTabIdx);
+            outState.PutInt(ConstantHelper.AndroidProfileToolbarState, (int)_masterToolbar.Visibility);
+
+            base.OnSaveInstanceState(outState, outPersistentState);
         }
     }
 }

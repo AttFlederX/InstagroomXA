@@ -27,6 +27,8 @@ namespace InstagroomXA.Core.ViewModels
         private readonly Lazy<NotificationsViewModel> _notificationsViewModel;
         private readonly Lazy<ProfileViewModel> _profileViewModel;
 
+        public int CurrentUserID { get; private set; } // exposes the user id for saving the current user from the code-behind
+
         public FeedViewModel FeedVM { get => _feedViewModel.Value; }
         public SearchPeopleViewModel SearchVM { get => _searchViewModel.Value; }
         public NewPostViewModel NewPostVM { get => _newPostViewModel.Value; }
@@ -49,6 +51,7 @@ namespace InstagroomXA.Core.ViewModels
         public MasterTabControlViewModel(IMvxMessenger messenger, IUserDataService userDataService) : base(messenger)
         {
             _userDataService = userDataService;
+            if (_userDataService.CurrentUser != null) { CurrentUserID = _userDataService.CurrentUser.ID; }
 
             _feedViewModel = new Lazy<FeedViewModel>(Mvx.IocConstruct<FeedViewModel>);
             _searchViewModel = new Lazy<SearchPeopleViewModel>(Mvx.IocConstruct<SearchPeopleViewModel>);

@@ -5,6 +5,7 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.V7.Widget;
@@ -19,7 +20,7 @@ using MvvmCross.Droid.Views;
 
 namespace InstagroomXA.Droid.Views
 {
-    [Activity(Label = "User profile")]
+    [Activity(Label = "User profile", ScreenOrientation = ScreenOrientation.Portrait)]
     public class UserProfileView : MvxActivity<UserProfileViewModel>
     {
         private Button _followButton;

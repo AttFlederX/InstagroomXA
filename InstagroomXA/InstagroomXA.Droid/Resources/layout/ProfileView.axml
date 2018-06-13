@@ -7,7 +7,7 @@
     style="@style/View.MasterPageStyle">
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
         <android.support.constraint.Guideline
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -18,17 +18,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/middleHorizontalGuideline"
-            local:layout_constraintGuide_percent=".50"
+            local:layout_constraintGuide_begin="200dp"
             android:orientation="horizontal" />
-    <!--to be replaced w/ profile image-->
-        <View
+        <Mvx.MvxImageView
+            android:id="@+id/userProfileImageView"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:layout_margin="15dp"
             local:layout_constraintBottom_toTopOf="@+id/middleHorizontalGuideline"
-            local:layout_constraintEnd_toStartOf="@+id/middleVerticalGuideline"
             local:layout_constraintStart_toStartOf="parent"
             local:layout_constraintTop_toTopOf="parent"
-            android:background="@color/buttonBlue" />
+            local:layout_constraintEnd_toStartOf="@+id/middleVerticalGuideline"
+            local:MvxBind="ImageUrl CurrentUser.ImagePath" />
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -36,7 +37,7 @@
             android:orientation="vertical"
             local:layout_constraintBottom_toTopOf="@+id/middleHorizontalGuideline"
             local:layout_constraintEnd_toEndOf="parent"
-            local:layout_constraintStart_toStartOf="@+id/middleVerticalGuideline"
+            local:layout_constraintStart_toEndOf="@+id/middleVerticalGuideline"
             local:layout_constraintTop_toTopOf="parent">
             <TextView
                 android:layout_width="wrap_content"

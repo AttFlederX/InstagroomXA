@@ -5,6 +5,7 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
@@ -17,7 +18,7 @@ using InstagroomXA.Core.ViewModels;
 
 namespace InstagroomXA.Droid.Views
 {
-    [Activity(Label = "Log in")]
+    [Activity(Label = "Log in", ScreenOrientation = ScreenOrientation.Portrait)]
     public class LoginView : MvxActivity<LoginViewModel>
     {
         protected override void OnCreate(Bundle savedInstanceState)
