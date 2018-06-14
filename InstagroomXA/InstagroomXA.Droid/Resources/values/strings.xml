@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="ApplicationName">InstagroomXA</string>
+  <!--Facebook API strings-->
+  <string name="facebook_app_id">234408670473963</string>
+  <string name="fb_login_protocol_scheme">fb234408670473963</string>
 
   <!--Welcome view strings-->
   <string name="welcomeString">Welcome to</string>
@@ -58,6 +61,10 @@
   <!--Feed page strings-->
   <string name="noFeedPostsString">Posts from people you\'re following will appear here\nUse the Search tab to find people to follow</string>
   
-  <!--Notification page string-->
+  <!--Notification page strings-->
   <string name="noNotificationsString">Your notifications will appear here</string>
+  
+  <!--Facebook login page strings-->
+  <string name="fbLoginInfoString">Instagroom can use your Facebook profile information to create your account</string>
+  <string name="fbUsernameInfoString">Please enter your Instagroom username:</string>
 </resources>

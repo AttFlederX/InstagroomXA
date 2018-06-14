@@ -66,6 +66,7 @@
     <Compile Include="Services\UserDataService.cs" />
     <Compile Include="Services\ValidationService.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\FacebookLoginViewModel.cs" />
     <Compile Include="ViewModels\Fragments\FeedViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\MasterTabControlViewModel.cs" />

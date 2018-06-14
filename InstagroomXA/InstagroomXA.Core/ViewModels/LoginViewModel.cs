@@ -96,6 +96,7 @@ namespace InstagroomXA.Core.ViewModels
             get => new MvxCommand(() =>
             {
                 // fetch the data from Facebook API
+                ShowViewModel<FacebookLoginViewModel>();
             });
         }
 

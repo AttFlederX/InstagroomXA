@@ -19,6 +19,9 @@ namespace InstagroomXA.Core.Model
         public int ID { get; set; }
 
         [MaxLength(255)]
+        public string FacebookID { get; set; }
+
+        [MaxLength(255)]
         public string Username { get; set; }
         [MaxLength(255)]
         public string FirstName { get; set; }

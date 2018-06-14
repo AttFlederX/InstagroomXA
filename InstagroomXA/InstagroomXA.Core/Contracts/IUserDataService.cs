@@ -16,6 +16,7 @@ namespace InstagroomXA.Core.Contracts
         User CurrentUser { get; set; }
 
         Task<User> GetUserByIDAsync(int userId);
+        Task<User> GetUserByFacebookIDAsync(string fbUserId);
         Task<User> GetUserByUsernameAsync(string username);
         Task<IEnumerable<User>> GetUserByQueryAsync(string queryString);
 

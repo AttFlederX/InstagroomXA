@@ -44,6 +44,16 @@
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bolts.AppLinks, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Bolts.1.4.0.1\lib\MonoAndroid403\Bolts.AppLinks.dll</HintPath>
+    </Reference>
+    <Reference Include="Bolts.Tasks, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Bolts.1.4.0.1\lib\MonoAndroid403\Bolts.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.ZXing.Core, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Google.ZXing.Core.3.3.0\lib\MonoAndroid\Google.ZXing.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Java.Interop" />
     <Reference Include="mscorlib" />
     <Reference Include="MvvmCross.Plugins.DownloadCache, Version=5.0.6.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\MvvmCross.Plugin.DownloadCache.5.0.6\lib\MonoAndroid\MvvmCross.Plugins.DownloadCache.dll</HintPath>
@@ -162,6 +172,9 @@
     <Reference Include="Xamarin.Android.Support.Core.Utils, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Android.Support.Core.Utils.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.Core.Utils.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.Android.Support.CustomTabs, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Android.Support.CustomTabs.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.CustomTabs.dll</HintPath>
+    </Reference>
     <Reference Include="Xamarin.Android.Support.Design, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Android.Support.Design.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.Design.dll</HintPath>
     </Reference>
@@ -177,14 +190,44 @@
     <Reference Include="Xamarin.Android.Support.Transition, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Android.Support.Transition.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.Transition.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Android.Support.v4.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
     <Reference Include="Xamarin.Android.Support.v7.AppCompat, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Android.Support.v7.AppCompat.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.CardView, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Android.Support.v7.CardView.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.v7.CardView.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Android.Support.v7.RecyclerView, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Android.Support.v7.RecyclerView.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Android.Support.Vector.Drawable, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Android.Support.Vector.Drawable.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.Vector.Drawable.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Facebook.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Facebook.Android.4.33.0\lib\monoandroid81\Xamarin.Facebook.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Facebook.AppLinks.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Facebook.AppLinks.Android.4.33.0\lib\monoandroid81\Xamarin.Facebook.AppLinks.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Facebook.Common.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Facebook.Common.Android.4.33.0\lib\monoandroid81\Xamarin.Facebook.Common.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Facebook.Core.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Facebook.Core.Android.4.33.0\lib\monoandroid81\Xamarin.Facebook.Core.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Facebook.Login.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Facebook.Login.Android.4.33.0\lib\monoandroid81\Xamarin.Facebook.Login.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Facebook.Messenger.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Facebook.Messenger.Android.4.33.0\lib\monoandroid81\Xamarin.Facebook.Messenger.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Facebook.Places.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Facebook.Places.Android.4.33.0\lib\monoandroid81\Xamarin.Facebook.Places.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Facebook.Share.Android, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Facebook.Share.Android.4.33.0\lib\monoandroid81\Xamarin.Facebook.Share.Android.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -225,7 +268,9 @@
   <ItemGroup>
     <AndroidAsset Include="Assets\font\Logo.ttf" />
     <None Include="app.config" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Resources\AboutResources.txt" />
     <AndroidResource Include="Resources\layout\WelcomeView.axml">
@@ -277,6 +322,7 @@
     <Compile Include="TextStyleCustomBinding.cs" />
     <Compile Include="Views\BaseView.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Views\FacebookLoginView.cs" />
     <Compile Include="Views\Fragments\FeedView.cs" />
     <Compile Include="Views\LoginView.cs" />
     <Compile Include="Views\MasterTabControlView.cs" />
@@ -472,6 +518,11 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\blank_profile_picture.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\FacebookLoginView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Android.Support.Annotations.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Annotations.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Annotations.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Annotations.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
@@ -496,6 +547,9 @@
     <Error Condition="!Exists('..\..\packages\Xamarin.Build.Download.0.4.11\build\Xamarin.Build.Download.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Build.Download.0.4.11\build\Xamarin.Build.Download.props'))" />
     <Error Condition="!Exists('..\..\packages\Xamarin.Build.Download.0.4.11\build\Xamarin.Build.Download.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Build.Download.0.4.11\build\Xamarin.Build.Download.targets'))" />
     <Error Condition="!Exists('..\..\packages\Xamarin.Android.Support.Percent.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Percent.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Android.Support.Percent.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Percent.targets'))" />
+    <Error Condition="!Exists('..\..\packages\Xamarin.Android.Support.CustomTabs.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.CustomTabs.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Android.Support.CustomTabs.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.CustomTabs.targets'))" />
+    <Error Condition="!Exists('..\..\packages\Xamarin.Android.Support.v4.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.v4.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Android.Support.v4.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.v4.targets'))" />
+    <Error Condition="!Exists('..\..\packages\Xamarin.Android.Support.v7.CardView.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.v7.CardView.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Android.Support.v7.CardView.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.v7.CardView.targets'))" />
   </Target>
   <Import Project="..\..\packages\Xamarin.Android.Arch.Core.Common.1.0.0\build\MonoAndroid80\Xamarin.Android.Arch.Core.Common.targets" Condition="Exists('..\..\packages\Xamarin.Android.Arch.Core.Common.1.0.0\build\MonoAndroid80\Xamarin.Android.Arch.Core.Common.targets')" />
   <Import Project="..\..\packages\Xamarin.Android.Arch.Lifecycle.Common.1.0.3\build\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Common.targets" Condition="Exists('..\..\packages\Xamarin.Android.Arch.Lifecycle.Common.1.0.3\build\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Common.targets')" />
@@ -513,4 +567,7 @@
   <Import Project="..\..\packages\Xamarin.Android.Support.Design.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Design.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Design.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Design.targets')" />
   <Import Project="..\..\packages\Xamarin.Build.Download.0.4.11\build\Xamarin.Build.Download.targets" Condition="Exists('..\..\packages\Xamarin.Build.Download.0.4.11\build\Xamarin.Build.Download.targets')" />
   <Import Project="..\..\packages\Xamarin.Android.Support.Percent.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Percent.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Percent.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Percent.targets')" />
+  <Import Project="..\..\packages\Xamarin.Android.Support.CustomTabs.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.CustomTabs.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.CustomTabs.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.CustomTabs.targets')" />
+  <Import Project="..\..\packages\Xamarin.Android.Support.v4.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.v4.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.v4.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.v4.targets')" />
+  <Import Project="..\..\packages\Xamarin.Android.Support.v7.CardView.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.v7.CardView.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.v7.CardView.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.v7.CardView.targets')" />
 </Project>

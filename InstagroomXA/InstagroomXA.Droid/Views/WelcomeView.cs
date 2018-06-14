@@ -32,11 +32,13 @@ namespace InstagroomXA.Droid.Views
             var prefs = PreferenceManager.GetDefaultSharedPreferences(this);
             int uid = prefs.GetInt(ConstantHelper.UserIDKey, -1);
             if (uid != -1) { ViewModel.AutoLoginCommand.Execute(uid); }
+            else
+            {
+                // Create your application here
+                SetContentView(Resource.Layout.WelcomeView);
 
-            // Create your application here
-            SetContentView(Resource.Layout.WelcomeView);
-
-            SetViewFonts();
+                SetViewFonts();
+            }
         }
 
         /// <summary>

@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:gravity="center"
-            android:textColor="#AAAAAA" />
+            android:textColor="@color/secondaryText" />
         <TextView
             android:id="@+id/logoTextView"
             android:text="Instagroom"

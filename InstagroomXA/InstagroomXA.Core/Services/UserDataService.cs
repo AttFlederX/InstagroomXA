@@ -57,6 +57,17 @@ namespace InstagroomXA.Core.Services
         }
 
         /// <summary>
+        /// Returns the user profile with the specified Facebook ID
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <returns></returns>
+        public async Task<User> GetUserByFacebookIDAsync(string fbUserId)
+        {
+            var query = await _masterConnection.GetAllWithChildrenAsync<User>(up => (up.FacebookID == fbUserId));
+            return query.FirstOrDefault();
+        }
+
+        /// <summary>
         /// Returns the user profile with the specified username (username should be unique)
         /// </summary>
         /// <param name="username"></param>

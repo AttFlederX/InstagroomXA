@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/View.AuthPageStyle">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/infoTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center_horizontal"
+            android:text="@string/fbLoginInfoString"
+            android:textSize="18sp"
+            android:textColor="@color/primaryText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/facebookLoginButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/infoTextView" />
+        <Mvx.MvxImageView
+            android:id="@+id/profilePictureImageView"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/facebookLoginButton"
+            app:MvxBind="ImageUrl ImagePath" />
+        <TextView
+            android:id="@+id/fullNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:textSize="24sp"
+            android:textColor="@color/primaryText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profilePictureImageView"
+            app:MvxBind="Text FullName" />
+        <LinearLayout
+            android:id="@+id/usernameEntryLinearLayout"
+            android:layout_width="330dp"
+            android:layout_height="163dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fullNameTextView"
+            app:MvxBind="Visibility IsUserRegistered">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fbUsernameInfoString"
+                android:textSize="16sp"
+                android:textColor="@color/primaryText" />
+            <EditText
+                android:id="@+id/usernameEntryTextView"
+                style="@style/EditText.BaseStyle"
+                android:layout_width="match_parent"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:hint="@string/usernameString"
+                android:inputType="textPersonName"
+                app:MvxBind="Text Username, Mode=TwoWay" />
+            <Button
+                android:id="@+id/fbSingUpButton"
+                style="@style/Button.BaseWhiteStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/registerButtonText"
+                app:MvxBind="Click RegisterCommand" />
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

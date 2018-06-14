@@ -142,6 +142,7 @@ namespace InstagroomXA.Core.ViewModels
                     var newUserProfile = new User()
                     {
                         Username = this.Username.ToLowerInvariant(),
+                        FacebookID = string.Empty,
                         ImagePath = ConstantHelper.BlankProfilePicturePath,
                         FirstName = this.FirstName,
                         LastName = this.LastName,

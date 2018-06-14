@@ -19,6 +19,7 @@ namespace InstagroomXA.Core.Helpers
         public static string FollowNotificationText => "@{0} followed you";
         public static string BlankProfilePicturePath => "res:blank_profile_picture";
         public static string UserIDKey => "UserID";
+        public static string FacebookProfilePictureLink => "https://graph.facebook.com/{0}/picture?type=large";
 
         public enum AndroidCameraRequestCodes { Camera, Gallery }
         public static int AndroidProfilePostsRecyclerViewColumnNum { get => 3; }
