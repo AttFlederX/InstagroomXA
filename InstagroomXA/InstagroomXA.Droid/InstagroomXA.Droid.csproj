@@ -322,6 +322,7 @@
     <Compile Include="TextStyleCustomBinding.cs" />
     <Compile Include="Views\BaseView.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Views\EditProfileView.cs" />
     <Compile Include="Views\FacebookLoginView.cs" />
     <Compile Include="Views\Fragments\FeedView.cs" />
     <Compile Include="Views\LoginView.cs" />
@@ -520,6 +521,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\FacebookLoginView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\EditProfileView.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

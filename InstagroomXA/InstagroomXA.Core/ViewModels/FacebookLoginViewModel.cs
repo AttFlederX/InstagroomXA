@@ -140,7 +140,7 @@ namespace InstagroomXA.Core.ViewModels
                     await _userDataService.AddUserAsync(newUserProfile);
                     _dialogService.ShowPopupMessage("Your account has been registered");
 
-                    _userDataService.CurrentUser = newUserProfile;
+                    _userDataService.CurrentUser = await _userDataService.GetUserByFacebookIDAsync(NewUser.FacebookID);
                     ShowViewModel<MasterTabControlViewModel>(presentationBundle:
                             new MvxBundle(new Dictionary<string, string> { { "ClearStack", "" } }));
                 }

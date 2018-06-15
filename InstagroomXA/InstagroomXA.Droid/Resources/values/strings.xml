@@ -67,4 +67,9 @@
   <!--Facebook login page strings-->
   <string name="fbLoginInfoString">Instagroom can use your Facebook profile information to create your account</string>
   <string name="fbUsernameInfoString">Please enter your Instagroom username:</string>
+  
+  <!--Edit profile page strings-->
+  <string name="profileInfoString">Profile information:</string>
+  <string name="changeProfilePictureString">Change profile picture:</string>
+  <string name="saveChangesButtonText">Save changes</string>
 </resources>

@@ -65,11 +65,11 @@ namespace InstagroomXA.Core.ViewModels
             {
                 if (selectedNotification.PostID < 0) // if no post was associated w/ notif
                 {
-                    ShowViewModel<UserProfileViewModel>(new { userId = selectedNotification.ID });
+                    ShowViewModel<UserProfileViewModel>(new { userId = selectedNotification.SourceUserID });
                 }
                 else
                 {
-                    ShowViewModel<PostViewModel>(new { postId = selectedNotification.PostID, userId = selectedNotification.ID });
+                    ShowViewModel<PostViewModel>(new { postId = selectedNotification.PostID, userId = selectedNotification.SourceUserID });
                 }
             });
         }

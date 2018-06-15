@@ -43,6 +43,7 @@ namespace InstagroomXA.Droid.Views
                 editor.PutInt(ConstantHelper.UserIDKey, ViewModel.CurrentUserID);
 
                 editor.Apply();
+                _isUserSaved = true;
             }
 
             // Create your application here

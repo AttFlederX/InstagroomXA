@@ -113,7 +113,7 @@ namespace InstagroomXA.Core.ViewModels
         {
             get => new MvxCommand<Post>(selectedPost =>
             {
-                ShowViewModel<PostViewModel>(new { postId = selectedPost.ID, userId = -1 });
+                ShowViewModel<PostViewModel>(new { postId = selectedPost.ID });
             });
         }
         #endregion

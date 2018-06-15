@@ -27,7 +27,7 @@ namespace InstagroomXA.Core.ViewModels
         private readonly INotificationDataService _notificationDataService;
 
         private int _postId;
-        private int _userId;
+        // private int _userId;
 
         private User _currentUser;
         private MvxObservableCollection<Comment> _commentList;
@@ -126,7 +126,8 @@ namespace InstagroomXA.Core.ViewModels
                         Time = DateTime.Now,
                         SourceUserImagePath = CurrentUser.ImagePath
                     };
-                    await _notificationDataService.AddNotificationAsync(likeNotif);
+                    if (likeNotif.SourceUserID != likeNotif.TargetUserID)
+                    { await _notificationDataService.AddNotificationAsync(likeNotif); }
                 }
                 else
                 {
@@ -190,7 +191,8 @@ namespace InstagroomXA.Core.ViewModels
                         Time = DateTime.Now,
                         SourceUserImagePath = CurrentUser.ImagePath
                     };
-                    await _notificationDataService.AddNotificationAsync(commentNotif);
+                    if (commentNotif.SourceUserID != commentNotif.TargetUserID)
+                    { await _notificationDataService.AddNotificationAsync(commentNotif); }
 
                     CommentText = string.Empty;
                 }
@@ -214,10 +216,10 @@ namespace InstagroomXA.Core.ViewModels
         }
 
 
-        public void Init(int postId, int userId)
+        public void Init(int postId)
         {
             _postId = postId;
-            _userId = userId;
+            // _userId = userId;
         }
 
         public override async void Start()
@@ -232,7 +234,8 @@ namespace InstagroomXA.Core.ViewModels
         /// <returns></returns>
         protected override async Task InitializeAsync()
         {
-            CurrentUser = (_userId == -1) ? _userDataService.CurrentUser : await _userDataService.GetUserByIDAsync(_userId);
+            // CurrentUser = (_userId == -1) ? _userDataService.CurrentUser : await _userDataService.GetUserByIDAsync(_userId);
+            CurrentUser = _userDataService.CurrentUser;
             CurrentPost = await _postDataService.GetPostByIDAsync(_postId);
             CommentList = new MvxObservableCollection<Comment>((await _commentDataService.GetPostComments(CurrentPost.ID)).Reverse());
             IsCommentListEmpty = (CurrentPost.NumOfComments == 0) ? _enumService.ViewStateVisible : 
