@@ -103,6 +103,21 @@ namespace InstagroomXA.Droid.Extensions
             return null;
         }
 
+        public static string GetThumbnailPath(this Android.Net.Uri uri, Context context)
+        {
+            string resUri = string.Empty;
+            var cursor = MediaStore.Images.Thumbnails.QueryMiniThumbnails(
+                             context.ContentResolver, uri,
+                             ThumbnailKind.MiniKind,
+                             null);
+            if (cursor != null && cursor.Count > 0)
+            {
+                cursor.MoveToFirst();
+                resUri = cursor.GetString(cursor.GetColumnIndex(MediaStore.Images.Thumbnails.Data));
+            }
+            return resUri;
+        }
+
 
         public static String GetDataColumn(Context context, Android.Net.Uri uri, String selection, String[] selectionArgs)
         {

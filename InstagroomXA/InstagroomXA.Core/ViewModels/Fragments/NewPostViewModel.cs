@@ -74,6 +74,7 @@ namespace InstagroomXA.Core.ViewModels
                     {
                         Description = NewPost.Description,
                         ImagePath = NewPost.ImagePath,
+                        ThumbnailPath = NewPost.ThumbnailPath,
                         Likes = 0,
                         PostTime = DateTime.Now,
                         UserID = _userDataService.CurrentUser.ID,
@@ -89,6 +90,7 @@ namespace InstagroomXA.Core.ViewModels
                     NewPost = new Post()
                     {
                         ImagePath = string.Empty,
+                        ThumbnailPath = string.Empty,
                         Description = string.Empty
                     };
                     
@@ -110,6 +112,7 @@ namespace InstagroomXA.Core.ViewModels
             NewPost = new Post()
             {
                 ImagePath = string.Empty,
+                ThumbnailPath = string.Empty,
                 Description = string.Empty
             };
         }

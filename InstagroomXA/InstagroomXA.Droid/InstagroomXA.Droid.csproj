@@ -512,7 +512,7 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\notification_listview.axml">
+    <AndroidResource Include="Resources\layout\notification_listitem.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

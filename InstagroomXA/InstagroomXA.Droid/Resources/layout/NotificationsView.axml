@@ -25,6 +25,6 @@
         local:layout_constraintEnd_toEndOf="parent"
         local:layout_constraintStart_toStartOf="parent"
         local:layout_constraintBottom_toBottomOf="parent"
-        local:MvxItemTemplate="@layout/notification_listview"
+        local:MvxItemTemplate="@layout/notification_listitem"
         local:MvxBind="ItemsSource NotificationList; ItemClick NotificationSelectedCommand" />
 </LinearLayout>

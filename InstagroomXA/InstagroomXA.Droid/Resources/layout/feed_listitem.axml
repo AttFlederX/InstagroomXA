@@ -57,7 +57,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/userInfoHorizontalGuideline"
-        app:MvxBind="ImageUrl ImagePath" />
+        app:MvxBind="ImageUrl ThumbnailPath" />
     <TextView
         android:id="@+id/likesTextView"
         android:layout_width="wrap_content"

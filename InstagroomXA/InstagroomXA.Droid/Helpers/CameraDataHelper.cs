@@ -14,5 +14,6 @@ namespace InstagroomXA.Droid.Helpers
     {
         public static File CurrentImage { get; set; }
         public static File ImageDirectory { get; set; }
+        public static File ThumbnailDirectory { get; set; }
     }
 }

@@ -25,7 +25,10 @@ namespace InstagroomXA.Core.Model
         public int UserID { get; set; }
         public DateTime PostTime { get; set; }
 
+        [MaxLength(255)]
         public string ImagePath { get; set; }
+        [MaxLength(255)]
+        public string ThumbnailPath { get; set; }
 
         [MaxLength(255)]
         public string Description { get; set; }

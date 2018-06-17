@@ -9,5 +9,5 @@
         android:id="@+id/masterImageView"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        local:MvxBind="ImageUrl ImagePath" />
+        local:MvxBind="ImageUrl ThumbnailPath" />
 </LinearLayout>

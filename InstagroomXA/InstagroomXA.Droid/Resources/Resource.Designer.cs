@@ -5558,7 +5558,7 @@ namespace InstagroomXA.Droid
 			public const int notification_action_tombstone = 2131034173;
 			
 			// aapt resource value: 0x7f05003e
-			public const int notification_listview = 2131034174;
+			public const int notification_listitem = 2131034174;
 			
 			// aapt resource value: 0x7f05003f
 			public const int notification_media_action = 2131034175;

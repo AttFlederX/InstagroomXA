@@ -12,6 +12,7 @@ namespace InstagroomXA.Core.Helpers
     public class ConstantHelper
     {
         public static string ImageDirectoryName { get => "instxa"; }
+        public static string ThumbnailDirectoryName { get => "instxa_thumbs"; }
         public static int InitialPostsNum { get => 20; }
         public static int MinQueryLength { get => 3; }
         public static string LikeNotificationText { get => "@{0} liked your post"; }

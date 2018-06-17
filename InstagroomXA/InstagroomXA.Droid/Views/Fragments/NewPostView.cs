@@ -88,6 +88,7 @@ namespace InstagroomXA.Droid.Views
                     if (resultCode == (int)Result.Ok)
                     {
                         CameraDataHelper.CurrentImage = new File(data.Data.GetRealPath(this.Context));
+
                         SetImage();
                     }
                 }
@@ -134,9 +135,14 @@ namespace InstagroomXA.Droid.Views
         {
             int width = _postImageView.Width;
             int height = _postImageView.Height;
+            var bitmap = BitmapHelper.LoadAndResizeBitmap(CameraDataHelper.CurrentImage.Path, width, height);
 
             ViewModel.NewPost.ImagePath = CameraDataHelper.CurrentImage.Path;
-            _postImageView.SetImageBitmap(BitmapHelper.LoadAndResizeBitmap(CameraDataHelper.CurrentImage.Path, width, height));
+            _postImageView.SetImageBitmap(bitmap);
+
+            ViewModel.NewPost.ThumbnailPath = new File(CameraDataHelper.ThumbnailDirectory,
+                $"thumb_{CameraDataHelper.CurrentImage.Name}.jpg").Path;
+            BitmapHelper.SaveImageThumbnail(bitmap, ViewModel.NewPost.ThumbnailPath);
 
             GC.Collect();
         }
@@ -145,8 +151,11 @@ namespace InstagroomXA.Droid.Views
         {
             CameraDataHelper.ImageDirectory = new File(Android.OS.Environment.GetExternalStoragePublicDirectory(
                 Android.OS.Environment.DirectoryPictures), ConstantHelper.ImageDirectoryName);
+            CameraDataHelper.ThumbnailDirectory = new File(Android.OS.Environment.GetExternalStoragePublicDirectory(
+                Android.OS.Environment.DirectoryPictures), ConstantHelper.ThumbnailDirectoryName);
 
             if (!CameraDataHelper.ImageDirectory.Exists()) { CameraDataHelper.ImageDirectory.Mkdirs(); }
+            if (!CameraDataHelper.ThumbnailDirectory.Exists()) { CameraDataHelper.ThumbnailDirectory.Mkdirs(); }
         }
     }
 }
