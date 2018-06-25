@@ -5793,8 +5793,8 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0b0037
 			public const int bottom_sheet_behavior = 2131427383;
 			
-			// aapt resource value: 0x7f0b006a
-			public const int changeProfilePictureString = 2131427434;
+			// aapt resource value: 0x7f0b006b
+			public const int changeProfilePictureString = 2131427435;
 			
 			// aapt resource value: 0x7f0b0038
 			public const int character_counter_pattern = 2131427384;
@@ -5868,95 +5868,95 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0b0017
 			public const int com_facebook_tooltip_default = 2131427351;
 			
-			// aapt resource value: 0x7f0b005f
-			public const int commentHintString = 2131427423;
-			
-			// aapt resource value: 0x7f0b004d
-			public const int createAccountButtonText = 2131427405;
-			
-			// aapt resource value: 0x7f0b005b
-			public const int descriptionHintString = 2131427419;
-			
-			// aapt resource value: 0x7f0b005a
-			public const int editProfileButtonText = 2131427418;
-			
-			// aapt resource value: 0x7f0b004b
-			public const int emailString = 2131427403;
-			
-			// aapt resource value: 0x7f0b0040
-			public const int facebook_app_id = 2131427392;
-			
-			// aapt resource value: 0x7f0b0067
-			public const int fbLoginInfoString = 2131427431;
-			
-			// aapt resource value: 0x7f0b0068
-			public const int fbUsernameInfoString = 2131427432;
-			
-			// aapt resource value: 0x7f0b0041
-			public const int fb_login_protocol_scheme = 2131427393;
-			
-			// aapt resource value: 0x7f0b004f
-			public const int feedString = 2131427407;
-			
-			// aapt resource value: 0x7f0b0049
-			public const int firstNameString = 2131427401;
-			
-			// aapt resource value: 0x7f0b0061
-			public const int followButtonText = 2131427425;
-			
-			// aapt resource value: 0x7f0b0062
-			public const int followedButtonText = 2131427426;
-			
-			// aapt resource value: 0x7f0b0057
-			public const int followersText = 2131427415;
-			
-			// aapt resource value: 0x7f0b0058
-			public const int followingText = 2131427416;
-			
-			// aapt resource value: 0x7f0b0054
-			public const int fullNameFallbackString = 2131427412;
-			
-			// aapt resource value: 0x7f0b004a
-			public const int lastNameString = 2131427402;
-			
-			// aapt resource value: 0x7f0b0043
-			public const int loginButtonText = 2131427395;
+			// aapt resource value: 0x7f0b0060
+			public const int commentHintString = 2131427424;
 			
 			// aapt resource value: 0x7f0b004e
-			public const int loginText = 2131427406;
+			public const int createAccountButtonText = 2131427406;
 			
-			// aapt resource value: 0x7f0b0047
-			public const int loginViaFacebookButtonText = 2131427399;
+			// aapt resource value: 0x7f0b005c
+			public const int descriptionHintString = 2131427420;
+			
+			// aapt resource value: 0x7f0b005b
+			public const int editProfileButtonText = 2131427419;
+			
+			// aapt resource value: 0x7f0b004c
+			public const int emailString = 2131427404;
+			
+			// aapt resource value: 0x7f0b0041
+			public const int facebook_app_id = 2131427393;
+			
+			// aapt resource value: 0x7f0b0068
+			public const int fbLoginInfoString = 2131427432;
+			
+			// aapt resource value: 0x7f0b0069
+			public const int fbUsernameInfoString = 2131427433;
+			
+			// aapt resource value: 0x7f0b0042
+			public const int fb_login_protocol_scheme = 2131427394;
+			
+			// aapt resource value: 0x7f0b0050
+			public const int feedString = 2131427408;
+			
+			// aapt resource value: 0x7f0b004a
+			public const int firstNameString = 2131427402;
+			
+			// aapt resource value: 0x7f0b0062
+			public const int followButtonText = 2131427426;
+			
+			// aapt resource value: 0x7f0b0063
+			public const int followedButtonText = 2131427427;
+			
+			// aapt resource value: 0x7f0b0058
+			public const int followersText = 2131427416;
+			
+			// aapt resource value: 0x7f0b0059
+			public const int followingText = 2131427417;
+			
+			// aapt resource value: 0x7f0b0055
+			public const int fullNameFallbackString = 2131427413;
+			
+			// aapt resource value: 0x7f0b004b
+			public const int lastNameString = 2131427403;
+			
+			// aapt resource value: 0x7f0b0044
+			public const int loginButtonText = 2131427396;
+			
+			// aapt resource value: 0x7f0b004f
+			public const int loginText = 2131427407;
+			
+			// aapt resource value: 0x7f0b0048
+			public const int loginViaFacebookButtonText = 2131427400;
 			
 			// aapt resource value: 0x7f0b0000
 			public const int messenger_send_button_text = 2131427328;
 			
-			// aapt resource value: 0x7f0b0051
-			public const int newPostString = 2131427409;
+			// aapt resource value: 0x7f0b0052
+			public const int newPostString = 2131427410;
 			
-			// aapt resource value: 0x7f0b0060
-			public const int noCommentsText = 2131427424;
-			
-			// aapt resource value: 0x7f0b0065
-			public const int noFeedPostsString = 2131427429;
+			// aapt resource value: 0x7f0b0061
+			public const int noCommentsText = 2131427425;
 			
 			// aapt resource value: 0x7f0b0066
-			public const int noNotificationsString = 2131427430;
+			public const int noFeedPostsString = 2131427430;
 			
-			// aapt resource value: 0x7f0b0059
-			public const int noPostsText = 2131427417;
+			// aapt resource value: 0x7f0b0067
+			public const int noNotificationsString = 2131427431;
 			
-			// aapt resource value: 0x7f0b0052
-			public const int notificationsString = 2131427410;
+			// aapt resource value: 0x7f0b005a
+			public const int noPostsText = 2131427418;
 			
-			// aapt resource value: 0x7f0b0056
-			public const int numOfPostsText = 2131427414;
+			// aapt resource value: 0x7f0b0053
+			public const int notificationsString = 2131427411;
 			
-			// aapt resource value: 0x7f0b005d
-			public const int openGalleryButtonText = 2131427421;
+			// aapt resource value: 0x7f0b0057
+			public const int numOfPostsText = 2131427415;
 			
-			// aapt resource value: 0x7f0b0046
-			public const int passwordString = 2131427398;
+			// aapt resource value: 0x7f0b005e
+			public const int openGalleryButtonText = 2131427422;
+			
+			// aapt resource value: 0x7f0b0047
+			public const int passwordString = 2131427399;
 			
 			// aapt resource value: 0x7f0b0039
 			public const int password_toggle_content_description = 2131427385;
@@ -5973,53 +5973,56 @@ namespace InstagroomXA.Droid
 			// aapt resource value: 0x7f0b003d
 			public const int path_password_strike_through = 2131427389;
 			
-			// aapt resource value: 0x7f0b005e
-			public const int postButtonText = 2131427422;
+			// aapt resource value: 0x7f0b005f
+			public const int postButtonText = 2131427423;
 			
-			// aapt resource value: 0x7f0b0069
-			public const int profileInfoString = 2131427433;
+			// aapt resource value: 0x7f0b006a
+			public const int profileInfoString = 2131427434;
 			
-			// aapt resource value: 0x7f0b0053
-			public const int profileString = 2131427411;
+			// aapt resource value: 0x7f0b0054
+			public const int profileString = 2131427412;
 			
-			// aapt resource value: 0x7f0b0044
-			public const int registerButtonText = 2131427396;
+			// aapt resource value: 0x7f0b0045
+			public const int registerButtonText = 2131427397;
 			
-			// aapt resource value: 0x7f0b0048
-			public const int registrationText = 2131427400;
+			// aapt resource value: 0x7f0b0049
+			public const int registrationText = 2131427401;
 			
-			// aapt resource value: 0x7f0b004c
-			public const int repeatPasswordString = 2131427404;
+			// aapt resource value: 0x7f0b004d
+			public const int repeatPasswordString = 2131427405;
 			
-			// aapt resource value: 0x7f0b006b
-			public const int saveChangesButtonText = 2131427435;
+			// aapt resource value: 0x7f0b006c
+			public const int saveChangesButtonText = 2131427436;
 			
-			// aapt resource value: 0x7f0b0064
-			public const int searchPeopleString = 2131427428;
+			// aapt resource value: 0x7f0b0065
+			public const int searchPeopleString = 2131427429;
 			
-			// aapt resource value: 0x7f0b0050
-			public const int searchString = 2131427408;
+			// aapt resource value: 0x7f0b0051
+			public const int searchString = 2131427409;
 			
 			// aapt resource value: 0x7f0b0029
 			public const int search_menu_title = 2131427369;
 			
+			// aapt resource value: 0x7f0b0040
+			public const int splashScreenText = 2131427392;
+			
 			// aapt resource value: 0x7f0b003e
 			public const int status_bar_notification_info_overflow = 2131427390;
 			
-			// aapt resource value: 0x7f0b005c
-			public const int takePhotoButtonText = 2131427420;
+			// aapt resource value: 0x7f0b005d
+			public const int takePhotoButtonText = 2131427421;
 			
-			// aapt resource value: 0x7f0b0063
-			public const int userNoPostsText = 2131427427;
+			// aapt resource value: 0x7f0b0064
+			public const int userNoPostsText = 2131427428;
 			
-			// aapt resource value: 0x7f0b0055
-			public const int usernameFallbackString = 2131427413;
+			// aapt resource value: 0x7f0b0056
+			public const int usernameFallbackString = 2131427414;
 			
-			// aapt resource value: 0x7f0b0045
-			public const int usernameString = 2131427397;
+			// aapt resource value: 0x7f0b0046
+			public const int usernameString = 2131427398;
 			
-			// aapt resource value: 0x7f0b0042
-			public const int welcomeString = 2131427394;
+			// aapt resource value: 0x7f0b0043
+			public const int welcomeString = 2131427395;
 			
 			static String()
 			{

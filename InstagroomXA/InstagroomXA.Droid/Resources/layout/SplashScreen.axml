@@ -5,6 +5,11 @@
     android:layout_height="match_parent">
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Loading...." />
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal|bottom"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="100dp"
+        android:text="@string/splashScreenText"
+        android:textColor="@color/primaryText"
+        android:textSize="18sp" />
 </LinearLayout>

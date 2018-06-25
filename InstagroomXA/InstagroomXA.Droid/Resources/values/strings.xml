@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="ApplicationName">InstagroomXA</string>
+  <string name="ApplicationName">InstagroomXA</string>
+  <string name="splashScreenText">Starting Instagroom...</string>
   <!--Facebook API strings-->
   <string name="facebook_app_id">234408670473963</string>
   <string name="fb_login_protocol_scheme">fb234408670473963</string>

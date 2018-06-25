@@ -78,7 +78,7 @@ namespace InstagroomXA.Core.ViewModels
             _postDataService = postDataService;
 
             CurrentUser = _userDataService.CurrentUser;
-            Messenger.Subscribe<PostUpdatedMessage>(message => RaisePropertyChanged(() => PostList), MvxReference.Strong);
+            Messenger.Subscribe<PostUpdatedMessage>(async message => await InitializeAsync(), MvxReference.Strong);
         }
 
 
